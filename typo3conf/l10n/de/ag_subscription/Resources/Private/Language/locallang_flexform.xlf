@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-12-14T16:15:06Z" product-name="competition">
+		<header/>
+		<body>
+						
+			<trans-unit id="flexforms_general.generalSetting">
+				<source>General Settings</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.generalSettingTab2">
+				<source>Mail to Receiver</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.generalSettingTab3">
+				<source>Mail to User</source>
+			</trans-unit>
+
+			
+			<trans-unit id="flexforms_general.sendToReceiver">
+				<source>Receiver get mail [Active]</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.showUnsubscribeLink">
+				<source>Show Unsubsribe link at front</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.receiverName">
+				<source>Receivers Name</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.receiverEmail">
+				<source>Receivers Email</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.receiverSubject">
+				<source>Subject for Email to Receiver (Empty subject disables mail)</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.senderName">
+				<source>Sender Name (For Confirmation Mail to User)</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.senderEmail">
+				<source>Sender Email (For Confirmation Mail to User)</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.senderSubject">
+				<source>Subject for Email to Sender (Empty subject disables mail)</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.storagePID">
+				<source>Starting Point</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.ttaddress">
+				<source>Fields [tt_address] -> No Email selection will break the functions </source>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_general.requiredFields">
+				<source>Require Fields -> No Email selection will break the functions </source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

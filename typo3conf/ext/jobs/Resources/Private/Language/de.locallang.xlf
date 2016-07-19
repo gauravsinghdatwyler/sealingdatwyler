@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file target-language="de" datatype="plaintext" original="messages" date="2016-04-19T10:43:37Z" product-name="jobs">
+		<header/>
+		<body>
+			<trans-unit id="tx_jobs_domain_model_country">
+				<target>Country</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_country.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobfield">
+				<target>Job Field</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobfield.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs">
+				<target>Jobs</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.title">
+				<target>Title</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.description">
+				<target>Description</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.jobfield">
+				<target>Jobfield</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.town">
+				<target>Town</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.email">
+				<source>E-mail</source>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_town">
+				<target>Town</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_town.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_town.country">
+				<target>Country</target>
+			</trans-unit>
+			
+			<trans-unit id="jobs.flexform.sheet_general">
+				<target>General Settings</target>
+			</trans-unit>
+			<trans-unit id="jobs.flexform.what_to_display">
+				<target>Select View</target>
+			</trans-unit>
+			<trans-unit id="jobs.flexform.Jobs.LIST">
+				<target>List View</target>
+			</trans-unit>
+			<trans-unit id="jobs.flexform.Jobs.DETAIL">
+				<target>Detail View</target>
+			</trans-unit>
+			<trans-unit id="jobs.flexform.Jobs.jobsListPid">
+				<target>Select List page</target>
+			</trans-unit>
+			<trans-unit id="jobs.flexform.Jobs.jobsDetailPid">
+				<target>Select Detail page</target>
+			</trans-unit>
+			<trans-unit id="jobs.flexform.applyJobPid">
+				<target>Apply Job page</target>
+			</trans-unit>
+			<trans-unit id="jobs.flexform.storageFolderPid">
+				<target>Record Storage page</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.jobCounts">
+				<target>Stellen</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.jobCount">
+				<target>Stelle</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.jobfunction.prependOptionLabel">
+				<target>Funktion wählen</target>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.country.prependOptionLabel">
+				<target>Land wählen</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

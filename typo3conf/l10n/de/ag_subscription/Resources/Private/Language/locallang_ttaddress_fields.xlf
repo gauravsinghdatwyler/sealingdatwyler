@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-01-06T17:43:47Z" product-name="ag_subscription">
+		<header/>
+		<body>
+			<!-- Add additional tt_address fields are here start -->
+			
+			<trans-unit id="tt_address.name">
+				<source>Name</source>
+			</trans-unit>
+			
+			<trans-unit id="tt_address.first_name">
+				<source>Vorname</source>
+			</trans-unit>
+			
+			<trans-unit id="tt_address.city">
+				<source>Wohnort</source>
+			</trans-unit>
+			
+			<trans-unit id="tt_address.email">
+				<source>E-mail</source>
+			</trans-unit>
+				
+			<trans-unit id="tt_address.phone">
+				<source>Phone</source>
+			</trans-unit>	
+			
+			<!-- Add additional tt_address fields are here start -->
+			
+		</body>
+	</file>
+</xliff>

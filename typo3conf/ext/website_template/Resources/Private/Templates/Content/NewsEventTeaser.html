@@ -1,0 +1,49 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Content"/>
+<f:section name="Configuration">
+	<flux:form id="NewsEventTeaser" label="News-Event Teaser FCE">
+		<flux:form.section name="blocks" label="Tabbed Content">
+			<flux:form.object name="block" label="Block">
+				<flux:field.input name="title" label="Title" />
+				<flux:field.text name="text" label="Text" enableRichText="0"/>
+				<flux:field.input name="link" label="Link">
+					<flux:wizard.link activeTab="page" />
+				</flux:field.input>
+				
+			</flux:form.object>
+		</flux:form.section>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>News-Event Teaser FCE</b>
+</f:section>
+
+<f:section name="Main">
+	<div class="random tabbed-box" role="article">
+		<ol class="text-box-toc not-expanded">
+			<f:for each="{blocks}" as="titleTabs" iteration="tabIterator">
+			<li>
+				<a class="{f:if(condition: tabIterator.isFirst, then: 'active')}"href="#tab-1-{tabIterator.cycle}">
+					<span>{titleTabs.block.title}</span>
+				</a>
+			</li>
+			</f:for>
+		</ol>
+		<div class="text-box-section-group">
+			<f:for each="{blocks}" as="tabcontent" iteration="tabIteratorContent">
+			<div class="text-box-section-text only-text" id="tab-1-{tabIteratorContent.cycle}">
+				<h2>
+					<f:link.typolink parameter="{tabcontent.block.link}">
+						<p>{tabcontent.block.text}</p>
+					</f:link.typolink>
+				</h2>
+			</div>
+			</f:for>
+		</div>
+	</div>
+</f:section>
+
+	

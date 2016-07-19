@@ -1,0 +1,5 @@
+.. |img-includestatic|      image:: ../Images/Administration/IncludeStatic.png
+.. :align: left
+
+.. |img-import1|      image:: ../Images/Administration/Import1.png
+.. :align: left

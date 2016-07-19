@@ -1,0 +1,38 @@
+<f:layout name="Default" />
+<f:section name="content">
+    <div id="wrapper">
+        <header id="branding" role="banner">
+           <f:render partial="header" arguments="{_all}" />
+        </header>
+
+        <section id="main-content">
+			<div class="clearfix" id="breadcrumb">
+				<f:cObject typoscriptObjectPath="lib.breadcrumb" />
+			</div>
+			
+			<!--<div id="page-intro">
+				<h1><f:cObject typoscriptObjectPath="lib.pagetitle" /></h1>
+			</div>-->
+            <div id="main" role="main">
+				<div class="login_page">
+					<f:cObject typoscriptObjectPath="lib.content.main" />
+				</div>
+            </div>
+            
+            <div id="base" class="clearfix">
+				<f:cObject typoscriptObjectPath="lib.content.right" />
+            </div>
+
+        </section>
+
+    </div>
+    <!-- end wrapper -->
+    <footer id="site-info">
+       <f:render partial="footer" arguments="{_all}" />
+    </footer>
+    
+</f:section>
+
+
+
+	

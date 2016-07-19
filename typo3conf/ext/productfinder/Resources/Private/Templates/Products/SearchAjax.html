@@ -1,0 +1,18 @@
+<f:for each="{products}" as="product">
+	<div class="product">
+		<f:link.action pageUid="{productDetailPid}" action="show" arguments="{products : product}">
+			<figure>
+				<f:image src="{product.image.originalResource.publicUrl}" width="180"/>
+			</figure>
+			<h2>{product.name}</h2>
+		</f:link.action>
+	</div>
+</f:for>
+<f:if condition="{products->f:count()}>0">
+	<f:then>
+		<div id="productFinderResCnt" style="display: none;">{products->f:count()} <f:translate key="label.listview.productCount" /></div>
+	</f:then>
+	<f:else>
+		<div id="productFinderResCnt" style="display: none;">{products->f:count()} <f:translate key="label.listview.productCount" /></div>
+	</f:else>
+</f:if>

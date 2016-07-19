@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="website_template" date="2015-04-08T14:38:32+01:00">
+		<header/>
+		<body>
+			<trans-unit id="HomePage">
+				<source>Home Page</source>
+			</trans-unit>
+			<trans-unit id="InnerPage1">
+				<source>Inner Page 1</source>
+			</trans-unit>
+			<trans-unit id="InnerPage3">
+				<source>Inner Page 3</source>
+			</trans-unit>
+			<trans-unit id="NewsPage">
+				<source>News template</source>
+			</trans-unit>
+			<trans-unit id="PageSlider">
+				<source>PageSlider Template</source>
+			</trans-unit>
+			<trans-unit id="DetailPage">
+				<source>DetailPage Template</source>
+			</trans-unit>
+			<trans-unit id="ProductDetail">
+				<source>Product Detail Template</source>
+			</trans-unit>
+			<trans-unit id="JobDetail">
+				<source>Job Detail Template</source>
+			</trans-unit>
+			<trans-unit id="JobDetail">
+				<source>Login Page Template</source>
+			</trans-unit>
+
+			<trans-unit id="flux.columns.columns.column1">
+				<source>Column 1</source>
+			</trans-unit>
+			<trans-unit id="flux.columns.columns.column2">
+				<source>Column 2</source>
+			</trans-unit>
+			<trans-unit id="flux.columns.columns.column3">
+				<source>Column 3</source>
+			</trans-unit>
+			<trans-unit id="flux.columns.columns.column4">
+				<source>Record Sliders</source>
+			</trans-unit>
+			<trans-unit id="flux.columns.columns.column5">
+				<source>Record Sliders</source>
+			</trans-unit>
+			<trans-unit id="flux.columns.columns.cta">
+				<source>Call to action</source>
+			</trans-unit>
+
+			<trans-unit id="flux.twoColConfig.columns.leftCol">
+				<source>Left Column</source>
+			</trans-unit>
+			<trans-unit id="flux.twoColConfig.columns.rightCol">
+				<source>Right Column</source>
+			</trans-unit>
+
+			<trans-unit id="flux.fileupload.columns.rightheader">
+				<source>&lt;span&gt;Broschüre &lt;/span&gt; HORADAM® AQUARELL</source>
+			</trans-unit>
+			<trans-unit id="flux.product.columns.zumprodukt">
+				<source>zum Produkt</source>
+			</trans-unit>
+			<trans-unit id="flux.download.file">
+				<source>Download</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

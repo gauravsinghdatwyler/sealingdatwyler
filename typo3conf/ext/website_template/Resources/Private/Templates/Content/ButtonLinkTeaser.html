@@ -1,0 +1,50 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Content"/>
+<f:section name="Configuration">
+	<flux:form id="ButtonLinkTeaser" label="Button Link Teaser FCE">
+		<flux:form.section name="blockstitle" label="Button Link Teaser">
+			<flux:form.object name="block" label="Block">
+				<flux:field.input name="title" label="Title" />
+				
+				<flux:form.section name="blocksbutton" label="Button Link">
+					<flux:form.object name="block" label="Block">
+						<flux:field.input name="buttontitle" label="Button Title" />
+						<flux:field.input name="link" label="Link">
+							<flux:wizard.link activeTab="page" />
+						</flux:field.input>
+					</flux:form.object>
+				</flux:form.section>
+				
+			</flux:form.object>
+		</flux:form.section>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>Button Link Teaser FCE</b>
+</f:section>
+
+<f:section name="Main">
+	<div class="clearfix button-link-list teaser-wrapper">
+		<div class="content">
+				<f:for each="{blockstitle}" as="blocktitle" iteration="itemIterationRoot">
+				<div class="clearfix button-link-list-area teaser-wrapper">
+					<f:if condition="{blocktitle.block.title}">
+						<h2>{blocktitle.block.title}</h2>
+					</f:if>
+					<div class="content">
+						<f:for each="{blocktitle.block.blocksbutton}" as="blockbutton" iteration="itemIterationChild">
+						<div class="button-link-list-item teaser">
+							<f:link.typolink parameter="{blockbutton.block.link}">{blockbutton.block.buttontitle}</f:link.typolink>
+						</div>
+						</f:for>
+						
+					</div>
+				</div>
+				</f:for>
+		</div>
+	</div>
+</f:section>
+

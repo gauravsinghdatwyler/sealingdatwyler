@@ -1,0 +1,35 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Content"/>
+<f:section name="Configuration">
+	<flux:form id="Videofce" label="Video FCE">
+			<flux:field.file name="video" label="Video" uploadFolder="uploads/video/" validate="trim" size="1" showThumbnails="1" maxItems="1" allowed="mp4" />
+			<flux:field.file name="poster" label="Video Image" uploadFolder="uploads/pics/" validate="trim" size="1" showThumbnails="1" maxItems="1" allowed="jpg,png,gif,jpeg,svg" />
+			<flux:field.input name="caption" label="Caption" />
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>Video FCE</b>
+</f:section>
+
+<f:section name="Main">
+	<dl class="media video large">
+		<dt>
+			<div class="mediaplayer">
+				<video poster="uploads/pics/{poster}" controls="controls" preload="none">
+				<source src="uploads/video/{video}" type="video/mp4" />   
+			   </video>
+			</div>
+		</dt>
+		<f:if condition="{caption}">
+			<dd class="caption">{caption}</dd>
+		</f:if>
+	</dl>
+</f:section>
+
+
+
+
+

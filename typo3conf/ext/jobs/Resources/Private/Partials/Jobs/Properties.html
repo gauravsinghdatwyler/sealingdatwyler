@@ -1,0 +1,9 @@
+<h2><p><strong>{jobs.title}</strong></p></h2>
+<span class="country">{jobs.town.country.name}, {jobs.town.name}</span>
+<div class="info">
+	<f:format.html>{jobs.description}</f:format.html>
+	<f:link.page pageUid="{settings.applyJobPid}" additionalParams="{jobs : jobs.uid}">
+		<div class="apply-to-job"><div class="button">Apply To Job</div></div>
+	</f:link.page>
+</div>
+

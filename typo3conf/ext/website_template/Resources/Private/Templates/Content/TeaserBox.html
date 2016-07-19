@@ -1,0 +1,38 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Content"/>
+<f:section name="Configuration">
+	<flux:form id="TeaserBox" label="Teaser Box FCE">
+			<flux:field.input name="title" label="Title" />
+			<flux:field.input name="text" label="Text" />
+			<flux:field.file name="image" label="Image" uploadFolder="uploads/pics/" validate="trim" size="1" showThumbnails="1" maxItems="1" allowed="jpg,png,gif,jpeg,svg" />
+			<flux:field.input name="buttontext" label="Button Text" />
+			<flux:field.input name="link" label="Link">
+				<flux:wizard.link activeTab="page" />
+			</flux:field.input>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>Teaser Box FCE</b>
+</f:section>
+
+<f:section name="Main">
+	<div id="teaser" class="teaser standard">
+		<f:link.typolink parameter="{link}">
+			<h2><p>{title}</p></h2>
+			<figure><f:image src="uploads/pics/{image}" alt=""  width="380c" height="253c" /></figure>
+			<f:if condition="{text}">
+				<p>{text}</p>
+			</f:if>
+			<f:if condition="{buttontext}">
+				<em class="button">{buttontext}</em>
+			</f:if>
+		</f:link.typolink>
+	</div>
+</f:section>
+
+	
+
+

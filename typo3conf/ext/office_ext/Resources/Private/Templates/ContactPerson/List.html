@@ -1,0 +1,139 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+<div id="main" role="main">
+	<div class="contact-finder">
+		<div class="gray-tabs">
+		   <div class="tab-v1 news_press">
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="filter active" data-filter=".con-gen"><a href="#" data-toggle="tab">General Contact</a></li>
+					<f:for each="{industries}" as="indus">
+						<f:if condition="{indus.name} != ''">
+							<li class="filter" data-filter=".cat-{indus.uid}"><a href="#" data-toggle="tab">{indus.name}</a></li>
+						</f:if>
+					</f:for>
+					<li class="filter" data-filter=".hr"><a href="#" data-toggle="tab">Human Resource Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	 	<div class="filters">
+			<div class="country-option">
+				<select id="contFilter">
+
+					<option value="null" class="null">
+						<f:translate key="LLL:EXT:office_ext/Resources/Private/Language/locallang_db.xlf:general_text.country_box" />
+					</option>
+					<f:for each="{countries}" as="coun">
+						<f:if condition="{coun.name} != ''">
+							<option value="{coun.name}" class="{coun.name}">{coun.name}</option>
+						</f:if>
+					</f:for>
+
+				</select>
+			</div>
+		</div>
+		<div class="content" id="contactFilter">
+			<f:for each="{contactPersons}" as="cPerson">
+				<f:if condition="{cPerson.contactType.uid} == 1">
+					<div class="vcard mix con-gen {cPerson.countryId.name}-cat-{cPerson.industryId.uid} {cPerson.countryId.name}-con-gen cat-{cPerson.industryId.uid} {cPerson.countryId.name}">
+						<h2>Contact</h2>
+						<div class="info">
+							<div>
+								<p class="fn n">
+									<span class="give-name">{cPerson.name}</span>
+								</p>
+							</div>
+							<f:if condition="{cPerson.countryId.name} != ''">
+								<div class="continent-country">{cPerson.countryId.continent.name} / {cPerson.countryId.name}</div>
+							</f:if>
+							<div>
+								<h3>Telephone</h3>
+								<dl class="tel">
+									<dt>Work</dt>
+									<dd class="value">{cPerson.contact}</dd>
+								</dl>
+							</div>
+							<div>
+								<h3>E-Mail</h3>
+								<dl class="email">
+									<dt>E-Mail</dt>
+									<dd class="value"><f:link.email email="{cPerson.email}">{cPerson.email}</f:link.email></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="button">
+							<f:link.action action="show" arguments="{contactPerson : cPerson}" controller="ContactPerson" pluginName="singleContact" pageUid="{settings.singleContactPage}">
+
+								<f:translate key="LLL:EXT:office_ext/Resources/Private/Language/locallang_db.xlf:general_text.btn_send" />
+
+							</f:link.action>
+						</div>
+					</div>
+
+				</f:if>
+
+				<f:if condition="{cPerson.contactType.uid} == 2">
+					<div class="vcard mix hr {cPerson.countryId.name}-hr {cPerson.countryId.name}">
+						<h2>Contact</h2>
+						<div class="info">
+							<div>
+								<p class="fn n">
+									<span class="give-name">{cPerson.name}</span>
+								</p>
+							</div>
+							<div class="continent-country">{cPerson.countryId.continent.name} / {cPerson.countryId.name}</div>
+							<div>
+								<h3>Telephone</h3>
+								<dl class="tel">
+									<dt>Work</dt>
+									<dd class="value">{cPerson.contact}</dd>
+								</dl>
+							</div>
+							<div>
+								<h3>E-Mail</h3>
+								<dl class="email">
+									<dt>E-Mail</dt>
+									<dd class="value"><f:link.email email="{cPerson.email}">{cPerson.email}</f:link.email></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="button">
+							<f:link.action action="show" arguments="{contactPerson : cPerson}" controller="ContactPerson" pluginName="singleContact" pageUid="{settings.singleContactPage}">
+
+								<f:translate key="LLL:EXT:office_ext/Resources/Private/Language/locallang_db.xlf:general_text.btn_send" />
+
+							</f:link.action>
+						</div>
+					</div>
+				</f:if>
+			</f:for>
+			<div class="vcard no-data">
+				<h2>No Data Found</h2>
+				<div class="info">
+					<div>
+						<p class="fn n">
+							<span class="give-name">Oops - </span>
+							<span class="family-name">No Data Found</span>
+						</p>
+					</div>
+					<div class="continent-country"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</f:section>

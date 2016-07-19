@@ -1,0 +1,1925 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+<div id="main" role="main">
+	<div id="worldmap">
+		<div>
+			<div id="map"></div>
+		</div>
+		<p id="single">
+			<f:translate key="LLL:EXT:office_ext/Resources/Private/Language/locallang_db.xlf:general_text.industry_single" />
+		</p>
+		<p id="multiple">
+			<f:translate key="LLL:EXT:office_ext/Resources/Private/Language/locallang_db.xlf:general_text.industry_multiple" />
+		</p>
+		<div class="filter">
+			<div class="status">
+				
+			</div>
+			<div class="industries">
+				<select id="officeFilter">
+					<option value="">
+						<f:translate key="LLL:EXT:office_ext/Resources/Private/Language/locallang_db.xlf:general_text.industry_default" />
+					</option>
+					<f:for each="{industries}" as="indus">
+						<f:if condition="{indus.name} != ''">
+							<option value="{indus.name}">{indus.name}</option>
+						</f:if>
+					</f:for>
+				</select>
+			</div>
+		</div>
+		<div class="contacts branchOffices">
+			<f:for each="{continents}" as="continent">
+				<f:if condition="{continent.name}!=''">
+					<div class="continent {continent.name} selected-ancestor">
+						<h2>{continent.name}</h2>
+						<f:for each="{industries}" as="industry">
+							<f:for each="{branches}" as="branch">
+								<f:if condition="{continent.uid} == {branch.countryId.continent.uid}">
+									<f:if condition="{industry.uid}=={branch.industryId.uid}">
+										<f:if condition="{branch.name}!=''">
+											<div class="contact branchOffice" data-industry="{industry.name}">
+												<dl>
+													<dt>{branch.name}</dt>
+													<dd>
+														<span class="more">
+															<f:link.action action="show" arguments="{branches : branch}">
+																
+																<f:translate key="LLL:EXT:office_ext/Resources/Private/Language/locallang_db.xlf:general_text.more_info" />
+
+															</f:link.action>
+														</span>
+													</dd>
+													<dd>{branch.address}</dd>
+													<dd>{branch.city} {branch.cityInfo} {branch.zip}, {branch.countryId.name}</dd>
+												</dl>
+												<div class="image">
+													<f:image src="{branch.image.originalResource.publicUrl}" width="150px"></f:image>
+												</div>
+											</div>
+										</f:if>
+									</f:if>
+								</f:if>
+							</f:for>
+						</f:for>
+					</div>
+				</f:if>
+			</f:for>
+		</div>
+	</div>
+	<script>
+var simplemaps_worldmap_mapdata={
+	main_settings:{ 
+			width: '1180',
+			background_color: '#009FB4',
+			background_transparent: 'no',
+			border_color: 'white',
+			zoom: 'yes',
+			pop_ups: 'detect',
+			state_description: 'Country description',
+			state_color: '#E1E2E2',
+			state_hover_color: '#E1E2E2',
+			state_url: 'http://screenconcept.ch',
+			all_states_inactive: 'yes',
+			location_description: 'Location description',
+			location_color: '#DF1417',
+			location_opacity: '1',
+			location_url: 'http://screenconcept.ch',
+			location_size: '24',
+			location_type: 'circle',
+			all_locations_inactive: 'no',
+			url_new_tab: 'no',
+			initial_zoom: '-1',
+			initial_zoom_solo: 'yes',
+			auto_load: 'yes',
+			hide_labels: 'no'
+	},
+	
+	state_specific:{ 
+		AE: { 
+			name: 'United Arab Emirates',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			inactive: 'yes',
+			url: 'default',
+			hide: 'no'
+		},
+	
+		AF: { 
+			name: 'Afghanistan',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		AL: { 
+			name: 'Albania',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		AM: { 
+			name: 'Armenia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		AO: { 
+			name: 'Angola',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		AR: { 
+			name: 'Argentina',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		AT: { 
+			name: 'Austria',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		AU: { 
+			name: 'Australia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		AZ: { 
+			name: 'Azerbaidjan',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BA: { 
+			name: 'Bosnia-Herzegovina',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BD: { 
+			name: 'Bangladesh',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BE: { 
+			name: 'Belgium',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BF: { 
+			name: 'Burkina Faso',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BG: { 
+			name: 'Bulgaria',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BH: { 
+			name: 'Bahrain',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BI: { 
+			name: 'Burundi',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BJ: { 
+			name: 'Benin',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BN: { 
+			name: 'Brunei Darussalam',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BO: { 
+			name: 'Bolivia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BR: { 
+			name: 'Brazil',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BS: { 
+			name: 'Bahamas',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BT: { 
+			name: 'Bhutan',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BW: { 
+			name: 'Botswana',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BY: { 
+			name: 'Belarus',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		BZ: { 
+			name: 'Belize',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CA: { 
+			name: 'Canada',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CD: { 
+			name: 'Congo',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CF: { 
+			name: 'Central African Republic',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CG: { 
+			name: 'Congo',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CH: { 
+			name: 'Switzerland',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CI: { 
+			name: 'Ivory Coast',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CL: { 
+			name: 'Chile',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CM: { 
+			name: 'Cameroon',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CN: { 
+			name: 'China',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CO: { 
+			name: 'Colombia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CR: { 
+			name: 'Costa Rica',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CU: { 
+			name: 'Cuba',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CV: { 
+			name: 'Cape Verde',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CY: { 
+			name: 'Cyprus',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		CZ: { 
+			name: 'Czech Republic',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		DE: { 
+			name: 'Germany',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		DJ: { 
+			name: 'Djibouti',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		DK: { 
+			name: 'Denmark',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		DO: { 
+			name: 'Dominican Republic',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		DZ: { 
+			name: 'Algeria',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		EC: { 
+			name: 'Ecuador',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		EE: { 
+			name: 'Estonia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		EG: { 
+			name: 'Egypt',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		EH: { 
+			name: 'Western Sahara',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		ER: { 
+			name: 'Eritrea',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		ES: { 
+			name: 'Spain',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		ET: { 
+			name: 'Ethiopia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		FI: { 
+			name: 'Finland',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		FJ: { 
+			name: 'Fiji',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		FK: { 
+			name: 'Falkland Islands',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		FR: { 
+			name: 'France',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		GA: { 
+			name: 'Gabon',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		GB: { 
+			name: 'Great Britain',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		GE: { 
+			name: 'Georgia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		GF: { 
+			name: 'French Guyana',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		GH: { 
+			name: 'Ghana',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		GL: { 
+			name: 'Greenland',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		GM: { 
+			name: 'Gambia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		GN: { 
+			name: 'Guinea',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		GQ: { 
+			name: 'Equatorial Guinea',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		GR: { 
+			name: 'Greece',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		GS: { 
+			name: 'S. Georgia & S. Sandwich Isls.',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		GT: { 
+			name: 'Guatemala',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		GW: { 
+			name: 'Guinea Bissau',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		GY: { 
+			name: 'Guyana',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		HN: { 
+			name: 'Honduras',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		HR: { 
+			name: 'Croatia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		HT: { 
+			name: 'Haiti',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		HU: { 
+			name: 'Hungary',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		IC: { 
+			name: 'Canary Islands',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		ID: { 
+			name: 'Indonesia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		IE: { 
+			name: 'Ireland',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		IL: { 
+			name: 'Israel',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		IN: { 
+			name: 'India',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		IQ: { 
+			name: 'Iraq',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		IR: { 
+			name: 'Iran',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		IS: { 
+			name: 'Iceland',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		IT: { 
+			name: 'Italy',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		JM: { 
+			name: 'Jamaica',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		JO: { 
+			name: 'Jordan',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		JP: { 
+			name: 'Japan',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		KE: { 
+			name: 'Kenya',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		KG: { 
+			name: 'Kyrgyzstan',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		KH: { 
+			name: 'Cambodia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		KP: { 
+			name: 'North Korea',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		KR: { 
+			name: 'South Korea',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		KW: { 
+			name: 'Kuwait',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		KZ: { 
+			name: 'Kazakhstan',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		LA: { 
+			name: 'Laos',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		LB: { 
+			name: 'Lebanon',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		LK: { 
+			name: 'Sri Lanka',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		LR: { 
+			name: 'Liberia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		LS: { 
+			name: 'Lesotho',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		LT: { 
+			name: 'Lithuania',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		LU: { 
+			name: 'Luxembourg',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		LV: { 
+			name: 'Latvia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		LY: { 
+			name: 'Libya',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		MA: { 
+			name: 'Morocco',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		MD: { 
+			name: 'Moldavia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		ME: { 
+			name: 'Montenegro',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		MG: { 
+			name: 'Madagascar',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		MK: { 
+			name: 'Macedonia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		ML: { 
+			name: 'Mali',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		MM: { 
+			name: 'Myanmar',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		MN: { 
+			name: 'Mongolia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		MR: { 
+			name: 'Mauritania',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		MW: { 
+			name: 'Malawi',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		MX: { 
+			name: 'Mexico',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		MY: { 
+			name: 'Malaysia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		MZ: { 
+			name: 'Mozambique',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		NA: { 
+			name: 'Namibia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		NC: { 
+			name: 'New Caledonia (French)',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		NE: { 
+			name: 'Niger',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		NG: { 
+			name: 'Nigeria',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		NI: { 
+			name: 'Nicaragua',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		NL: { 
+			name: 'Netherlands',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		NO: { 
+			name: 'Norway',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		NP: { 
+			name: 'Nepal',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		NZ: { 
+			name: 'New Zealand',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		OM: { 
+			name: 'Oman',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		PA: { 
+			name: 'Panama',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		PE: { 
+			name: 'Peru',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		PG: { 
+			name: 'Papua New Guinea',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		PH: { 
+			name: 'Philippines',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		PK: { 
+			name: 'Pakistan',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		PL: { 
+			name: 'Poland',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		PR: { 
+			name: 'Puerto Rico',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		PS: { 
+			name: 'Palestine',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		PT: { 
+			name: 'Portugal',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		PY: { 
+			name: 'Paraguay',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		QA: { 
+			name: 'Qatar',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		RO: { 
+			name: 'Romania',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		RS: { 
+			name: 'Serbia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		RU: { 
+			name: 'Russia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		RW: { 
+			name: 'Rwanda',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		SA: { 
+			name: 'Saudi Arabia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		SB: { 
+			name: 'Solomon Islands',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		SD: { 
+			name: 'Sudan',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		SE: { 
+			name: 'Sweden',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		SI: { 
+			name: 'Slovenia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		SK: { 
+			name: 'Slovak Republic',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		SL: { 
+			name: 'Sierra Leone',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		SN: { 
+			name: 'Senegal',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		SO: { 
+			name: 'Somalia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		SR: { 
+			name: 'Suriname',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		SS: { 
+			name: 'South Sudan',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		SV: { 
+			name: 'El Salvador',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		SY: { 
+			name: 'Syria',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		SZ: { 
+			name: 'Swaziland',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		TD: { 
+			name: 'Chad',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		TG: { 
+			name: 'Togo',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		TH: { 
+			name: 'Thailand',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		TJ: { 
+			name: 'Tadjikistan',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		TL: { 
+			name: 'East Timor',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		TM: { 
+			name: 'Turkmenistan',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		TN: { 
+			name: 'Tunisia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		TR: { 
+			name: 'Turkey',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		TT: { 
+			name: 'Trinidad and Tobago',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		TW: { 
+			name: 'Taiwan',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		TZ: { 
+			name: 'Tanzania',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		UA: { 
+			name: 'Ukraine',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		UG: { 
+			name: 'Uganda',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		US: { 
+			name: 'United States',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			inactive: 'yes',
+			hide: 'no'
+		},
+	
+		UY: { 
+			name: 'Uruguay',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		UZ: { 
+			name: 'Uzbekistan',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		VE: { 
+			name: 'Venezuela',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		VN: { 
+			name: 'Vietnam',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		VU: { 
+			name: 'Vanuatu',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		YE: { 
+			name: 'Yemen',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		ZA: { 
+			name: 'South Africa',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		ZM: { 
+			name: 'Zambia',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		},
+	
+		ZW: { 
+			name: 'Zimbabwe',
+			description: 'default',
+			color: 'default',
+			hover_color: 'default',
+			url: 'default',
+			hide: 'no',
+			inactive: 'yes'
+		}
+	
+	},
+
+	locations:{
+			<f:for each="{branches}" as="bran">
+				<f:if condition="{bran.name}!=''"> 
+					{bran.uid}: {
+						name :<f:format.raw>'{bran.name}'</f:format.raw>,
+						lat :<f:format.raw>'{bran.latitude}'</f:format.raw>,
+						lng :<f:format.raw>'{bran.longitude}'</f:format.raw>,
+						description :'',
+						url :'{base_url}{f:uri.action(action: 'show', arguments: {branches: bran})}',
+						color :'default',
+						size :'18',
+						type :'square'
+					},
+				</f:if>
+			</f:for>
+	},
+
+	regions:{ 
+		0: { 
+			name: '',
+			states:[]
+		}
+	
+	},
+	
+	continent:[ 
+		 { 
+			x: 'Infinity',
+			y: 'Infinity',
+			width: '-Infinity',
+			height: '-Infinity'
+		}
+	
+	]
+
+}
+</script>
+<script src="typo3conf/ext/office_ext/Resources/Public/js/worldmap.js" ></script>
+</div>
+
+</f:section>

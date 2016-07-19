@@ -1,0 +1,113 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+<div class="contactresults-provisory">
+	<div class="vcard-wrapper">
+		<div class="vcard-wrapper">
+			<div class="teaser box vcard">
+				<h2>Contact</h2>
+				<div class="info">
+					<div>
+						<p class="fn n">
+							<span class="given-name">{contactPerson.name}</span>
+							<span class="family-name">{contactPerson.officeId.city}</span>
+						</p>
+					</div>
+					<div class="continent-country">
+						{contactPerson.countryId.continent.name} / {contactPerson.countryId.name}
+					</div>
+					<div>
+						<h3>Telephone</h3>
+						<dl class="tel">
+							<dt>Work</dt>
+							<dd class="value">{contactPerson.contact}</dd>
+						</dl>
+					</div>
+					<div>
+						<h3>E-Mail</h3>
+						<dl class="email">
+							<dt>E-Mail</dt>
+							<dd class="value">
+								<f:link.email email="{contactPerson.email}">{contactPerson.email}</f:link.email>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="change-contact-wrapper">
+		<div class="change-contact">
+			<f:link.action pageUid="{pageUid}"> Change the Contact Person</f:link.action>
+		</div>
+	</div>
+</div>
+
+<div id="main" role="main">
+<div class="text error">
+
+</div>
+
+	<div class="form-wrapper">
+		<f:form action="create"  enctype="multipart/form-data"  name="newQuery" controller="Query" object="{newQuery}">
+		<div class="form-item-hidden">
+			<f:form.hidden property="contactPerson" name="contactPerson" value="{contactPerson}" />
+			<f:form.hidden property="officeId" name="officeId" value="{contactPerson.officeId}" />
+		</div>
+			<p class="required" style="z-index: 1;">*fields required</p>
+			<fieldset>
+				<h2>Please enter your question</h2>
+				<div class="form-row">
+					<label for="message">
+							<span>Your Message</span>
+					</label>
+					<f:form.textarea property="message" name="message" rows="10" additionalAttributes="{required:'required'}"/>
+				</div>
+				<div class="form-row">
+					<div class="form-item-s">
+						<label for="fullname"><span>Full Name*</span></label>
+						<f:form.textfield property="fullName" additionalAttributes="{id:'fullName'}" name="fullName" required="required"/>
+					</div>
+				</div>
+				<div class="form-row" style="float: none; float: right;">
+					<div class="form-item-s">
+						<label for="Company"><span>Company</span></label>
+						<f:form.textfield property="company" name="company" />
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-item-s">
+						<label for="email"><span>email*</span></label>
+						<f:form.textfield property="email" additionalAttributes="{id:'userEmail'}" name="email" required="required"/>
+					</div>
+				</div>
+				<div class="form-row" style="float: none; float: right;">
+					<div class="form-item-s">
+						<label for="Country"><span>Country</span></label>
+						<f:form.textfield property="country" name="country" />
+					</div>
+				</div>
+				<div class="button-wrapper">
+					<f:form.submit value="SUBMIT" additionalAttributes="{id:'addQuery'}"/>
+				</div>
+			</fieldset>
+		</f:form>
+	</div>
+</div>
+
+
+</f:section>

@@ -1,0 +1,2 @@
+# cat=basic/enable; type=options[Filter all=0, Filter none=1, Filter all except indexed search comments=2]; label=Filter HTML comments
+filter.comments = 0

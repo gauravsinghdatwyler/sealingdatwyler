@@ -1,0 +1,90 @@
+<T3DataStructure>
+	<meta>
+	<langDisable>1</langDisable>
+	<!--  <langChildren>1</langChildren>!-->
+		</meta>
+<sheets>
+	<sDEF>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:productfinder/Resources/Private/Language/locallang.xlf:products.flexform.sheet_general</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+
+		<switchableControllerActions>
+			<TCEforms>
+				<onChange>reload</onChange>
+				<label>LLL:EXT:productfinder/Resources/Private/Language/locallang.xlf:products.flexform.what_to_display</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+						<numIndex index="0" type="array">
+							<numIndex index="0">LLL:EXT:productfinder/Resources/Private/Language/locallang.xlf:products.flexform.Product.LIST</numIndex>
+							<numIndex index="1">Products->list;Products->show</numIndex>
+						</numIndex>					
+						<numIndex index="1" type="array">
+							<numIndex index="0">LLL:EXT:productfinder/Resources/Private/Language/locallang.xlf:products.flexform.Product.DETAIL</numIndex>
+							<numIndex index="1">Products->show;Products->list</numIndex>
+						</numIndex>
+					</items>
+					<maxitems>1</maxitems>
+					<size>1</size>
+				</config>
+			</TCEforms>
+		</switchableControllerActions>
+
+		<settings.productListPid>
+			<TCEforms>
+				<exclude>1</exclude>
+				<displayCond><![CDATA[FIELD:switchableControllerActions:=:Products->show;Products->list]]></displayCond>
+				<label>LLL:EXT:productfinder/Resources/Private/Language/locallang.xlf:products.flexform.Product.productListPid</label>
+				<config>
+					<type>group</type>
+					<internal_type>db</internal_type>
+					<allowed>pages</allowed>
+					<size>1</size>
+					<maxitems>1</maxitems>
+					<minitems>0</minitems>
+					<show_thumbs>1</show_thumbs>
+				</config>
+			</TCEforms>
+		</settings.productListPid>
+		<settings.productDetailPid>
+			<TCEforms>
+				<exclude>1</exclude>
+				<displayCond><![CDATA[FIELD:switchableControllerActions:=:Products->list;Products->show]]></displayCond>
+				<label>LLL:EXT:productfinder/Resources/Private/Language/locallang.xlf:products.flexform.Product.productDetailPid</label>
+				<config>
+					<type>group</type>
+					<internal_type>db</internal_type>
+					<allowed>pages</allowed>
+					<size>1</size>
+					<maxitems>1</maxitems>
+					<minitems>0</minitems>
+					<show_thumbs>1</show_thumbs>
+				</config>
+			</TCEforms>
+		</settings.productDetailPid>
+		
+		<settings.storageFolderPid>
+			<TCEforms>
+				<exclude>1</exclude>
+				<label>LLL:EXT:productfinder/Resources/Private/Language/locallang.xlf:products.flexform.storageFolderPid</label>
+				<config>
+					<type>group</type>
+					<internal_type>db</internal_type>
+					<allowed>pages</allowed>
+					<size>1</size>
+					<maxitems>1</maxitems>
+					<minitems>0</minitems>
+					<show_thumbs>1</show_thumbs>
+				</config>
+			</TCEforms>
+		</settings.storageFolderPid>
+
+		</el>
+	</ROOT>
+	</sDEF>
+</sheets>
+</T3DataStructure>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="de" type="array">
+      <label index=".description"/>
+      <label index=".details"/>
+      <label index="_.seeAlso">sys_dmail_group, sys_dmail_category</label>
+      <label index="type.description"/>
+      <label index="type.details"/>
+      <label index="from_email.description"/>
+      <label index="from_email.details"/>
+      <label index="from_name.description"/>
+      <label index="from_name.details"/>
+      <label index="replyto_email.description"/>
+      <label index="replyto_email.details"/>
+      <label index="replyto_name.description"/>
+      <label index="replyto_name.details"/>
+      <label index="return_path.description"/>
+      <label index="return_path.details"/>
+      <label index="organisation.description"/>
+      <label index="organisation.details"/>
+      <label index="priority.description"/>
+      <label index="priority.details"/>
+      <label index="sendOptions.description"/>
+      <label index="sendOptions.details"/>
+      <label index="includeMedia.description"/>
+      <label index="includeMedia.details"/>
+      <label index="flowedFormat.description"/>
+      <label index="flowedFormat.details"/>
+      <label index="HTMLParams.description"/>
+      <label index="HTMLParams.details"/>
+      <label index="plainParams.description"/>
+      <label index="plainParams.details"/>
+      <label index="use_domain.description"/>
+      <label index="use_domain.details"/>
+      <label index="use_rdct.description"/>
+      <label index="use_rdct.details"/>
+      <label index="long_link_mode.description"/>
+      <label index="authcode_fieldList.description"/>
+    </languageKey>
+  </data>
+</T3locallangExt>

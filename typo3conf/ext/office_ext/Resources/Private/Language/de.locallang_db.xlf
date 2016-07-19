@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-04-28T15:03:36Z" product-name="office_ext">
+		<header/>
+		<body>
+			<trans-unit id="tx_officeext_domain_model_query">
+				<source>Query</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_query.form_title">
+				<source>Please enter your question</source>
+				<target>Bitte geben Sie Ihre Frage ein</target>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_query.full_name">
+				<source>Full Name</source>
+				<target>Vollständiger Name</target>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_query.email">
+				<source>Email</source>
+				<target>E-mail</target>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_query.country">
+				<source>Country</source>
+				<target>Land</target>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_query.company">
+				<source>Company</source>
+				<target>Unternehmen</target>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_query.message">
+				<source>Message</source>
+				<target>Ihre Nachricht</target>
+			</trans-unit>
+			<trans-unit id="general_text.btn_overview">
+				<source>Back To Overview</source>
+				<target>Zurück zur Übersicht</target>
+			</trans-unit>
+			<trans-unit id="general_text.required_fields">
+				<source>*Fields Required</source>
+				<target>*erforderlich Felder</target>
+			</trans-unit>
+			<trans-unit id="general_text.query_form_error_head">
+				<source>Success title</source>
+				<target>Titel Erfolg</target>
+			</trans-unit>
+			<trans-unit id="general_text.query_form_error_email">
+				<source>email: must be a valid email address</source>
+				<target>E-Mail: Bitte geben Sie eine valide E-Mail Adresse ein</target>
+			</trans-unit>
+			<trans-unit id="general_text.submit_text">
+				<source>SUBMIT</source>
+				<target>SENDEN</target>
+			</trans-unit>
+			<trans-unit id="general_text.country_box">
+				<source>Country</source>
+				<target>Land</target>
+			</trans-unit>
+			<trans-unit id="general_text.btn_send">
+				<source>SEND A MESSAGE</source>
+				<target>MITTEILUNG SENDEN</target>
+			</trans-unit>
+			<trans-unit id="general_text.industry_default">
+				<source>Select an Industry</source>
+				<target>Industrie wählen</target>
+			</trans-unit>
+			<trans-unit id="general_text.more_info">
+				<source>More Information</source>
+				<target>Weitere Informationen</target>
+			</trans-unit>
+			<trans-unit id="general_text.breadcrumb_text">
+				<source>Worldwide Locations</source>
+				<target>Standorte weltweit</target>
+			</trans-unit>
+			<trans-unit id="general_text.industry_single">
+				<source>location/production site</source>
+				<target>Standort</target>
+			</trans-unit>
+			<trans-unit id="general_text.industry_multiple">
+				<source>locations/production sites</source>
+				<target>Standorte</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

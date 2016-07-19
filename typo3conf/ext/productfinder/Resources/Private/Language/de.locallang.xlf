@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2016-04-14T14:49:21Z" product-name="productfinder">
+		<header/>
+		<body>
+			<trans-unit id="tx_productfinder_domain_model_applications">
+				<target>Applications</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_applications.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_types">
+				<target>Types</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_types.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_dimensions">
+				<target>Dimensions</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_dimensions.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_materials">
+				<target>Materials</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_materials.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products">
+				<target>Products</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.description">
+				<target>Description</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.image">
+				<target>Image</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.application">
+				<target>Art der Anwendung</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.size">
+				<target>Größe</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.material">
+				<target>Werkstoff</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.type">
+				<target>Typ</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.pdfs">
+				<target>Pdfs</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_pdfs">
+				<target>Pdfs</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_pdfs.title">
+				<target>Title</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_pdfs.file">
+				<target>File</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_pdfs.issecure">
+				<target>Issecure</target>
+			</trans-unit>
+
+			<trans-unit id="tx_productfinder_domain_model_products.application.prependOptionLabel">
+				<target>Choose Application</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.type.prependOptionLabel">
+				<target>Produkttyp wählen</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.dimension.prependOptionLabel">
+				<target>Grösse wählen</target>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.material.prependOptionLabel">
+				<target>Material wählen</target>
+			</trans-unit>
+
+			<trans-unit id="tx_productfinder_domain_model_products.form.resetBtnLabel">
+				<target>Clear filters</target>
+			</trans-unit>
+
+			<trans-unit id="products.flexform.sheet_general">
+				<target>General Settings</target>
+			</trans-unit>
+			<trans-unit id="products.flexform.what_to_display">
+				<target>Select View</target>
+			</trans-unit>
+			<trans-unit id="products.flexform.Product.LIST">
+				<target>List View</target>
+			</trans-unit>
+			<trans-unit id="products.flexform.Product.DETAIL">
+				<target>Detail View</target>
+			</trans-unit>
+			<trans-unit id="products.flexform.Product.productListPid">
+				<target>Select List page</target>
+			</trans-unit>
+			<trans-unit id="products.flexform.Product.productDetailPid">
+				<target>Select Detail page</target>
+			</trans-unit>
+			<trans-unit id="products.flexform.storageFolderPid">
+				<target>Select Storage page</target>
+			</trans-unit>
+
+
+			<trans-unit id="label.detailview.secureDownloadAvailableLabel">
+				<target>+ Gesicherte Dokumente verfügbar</target>
+			</trans-unit>
+			<trans-unit id="label.detailview.download">
+				<target>Download</target>
+			</trans-unit>
+			<trans-unit id="label.detailview.PDFdownload">
+				<target>PDF Download</target>
+			</trans-unit>
+
+			<trans-unit id="label.listview.productCount">
+				<target>products</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

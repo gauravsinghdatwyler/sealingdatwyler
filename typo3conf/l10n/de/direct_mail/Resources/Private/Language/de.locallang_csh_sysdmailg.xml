@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="de" type="array">
+		<label index=".description"/>
+		<label index=".details"/>
+		<label index="_.seeAlso"/>
+		<label index="csv.description"/>
+		<label index="csv.details"/>
+		<label index="description.description"/>
+		<label index="description.details"/>
+		<label index="list.description"/>
+		<label index="list.details"/>
+		<label index="mail_groups.description"/>
+		<label index="mail_groups.details"/>
+		<label index="pages.description"/>
+		<label index="pages.details"/>
+		<label index="recursive.description"/>
+		<label index="recursive.details"/>
+		<label index="select_categories.description"/>
+		<label index="select_categories.details"/>
+		<label index="static_list.description"/>
+		<label index="static_list.details"/>
+		<label index="title.description"/>
+		<label index="title.details"/>
+		<label index="type.description"/>
+		<label index="type.details"/>
+		<label index="whichtables.description"/>
+		<label index="whichtables.details"/>
+		</languageKey>
+  </data>
+</T3locallangExt>

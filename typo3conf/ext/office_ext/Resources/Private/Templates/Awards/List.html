@@ -1,0 +1,41 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for Awards</h1>
+
+<f:flashMessages />
+
+<table  class="tx_officeext" >
+	<tr>
+		<th><f:translate key="tx_officeext_domain_model_awards.name" /></th>
+		<th><f:translate key="tx_officeext_domain_model_awards.image" /></th>
+		<th><f:translate key="tx_officeext_domain_model_awards.description" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{awardss}" as="awards">
+		<tr>
+			<td><f:link.action action="show" arguments="{awards : awards}"> {awards.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{awards : awards}"> {awards.image.originalResource.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{awards : awards}"> {awards.description}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{awards : awards}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{awards : awards}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New Awards</f:link.action>
+</f:section>

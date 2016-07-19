@@ -1,0 +1,45 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Content"/>
+<f:section name="Configuration">
+	<flux:form id="PngDownlaodFCE" label="PNG Download FCE">
+		<flux:field.input name="heading" label="Heading" />
+		<flux:form.section name="blocks" label="PDF Download FCE">
+			<flux:form.object name="block" label="Block">
+				<flux:field.input name="title" label="Title" />
+				<flux:field.file name="image" label="Image" uploadFolder="uploads/pics/" validate="trim" size="1" showThumbnails="1" maxItems="1" allowed="png" />
+			</flux:form.object>
+		</flux:form.section>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>PNG Download FCE</b>
+</f:section>
+
+<f:section name="Main">
+	<div class="pngdownload_section">
+		<div class="downloads">
+			<f:if condition="{heading}">
+			<div class="head png_head"><h2>{heading}</h2></div>
+			</f:if>
+			<ul class="public">
+				<f:for each="{blocks}" as="block">
+					<li class="download">
+						<f:link.typolink parameter="uploads/pics/{block.block.image}" target="_blank">
+							<figure>
+								<img src="typo3conf/ext/website_template/Resources/Public/images/vignette-document-download.png" alt="" title="">
+							</figure>
+							<div class="text">
+								<span class="title">{block.block.title}</span>
+								<span class="extension">PNG Download</span>
+								<span class="link">{block.block.image}</span>
+							</div>
+						</f:link.typolink>
+					</li>
+				</f:for>
+			</ul>
+		</div>
+	</div>
+</f:section>

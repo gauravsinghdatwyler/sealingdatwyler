@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-04-08T15:03:36Z" product-name="office_ext">
+		<header/>
+		<body>
+			<trans-unit id="tx_officeext_domain_model_continent">
+				<source>Continent</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_continent.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_country.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_country.continent">
+				<source>Continent</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_industry">
+				<source>Industry</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_industry.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_branchoffice">
+				<source>Branch Office</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_branchoffice.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_branchoffice.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_branchoffice.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_branchoffice.city_info">
+				<source>City Info</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_branchoffice.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_branchoffice.site_url">
+				<source>Site Url</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_branchoffice.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_branchoffice.latitude">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_branchoffice.longitude">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_branchoffice.country_id">
+				<source>Country Id</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_branchoffice.industry_id">
+				<source>Industry Id</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_contactperson">
+				<source>Contact Person</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_contactperson.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_contactperson.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_contactperson.contact">
+				<source>Contact</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_contactperson.office_id">
+				<source>Office Id</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_contactperson.country_id">
+				<source>Country Id</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_contactperson.contact_type">
+				<source>Contact Type</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_contactperson.industry_id">
+				<source>Industry</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_awards">
+				<source>Awards</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_awards.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_awards.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_awards.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_awards.office_id">
+				<source>Office Id</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_query">
+				<source>Query</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_query.form_title">
+				<source>Please enter your question</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_query.full_name">
+				<source>Full Name</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_query.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_query.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_query.company">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_query.message">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_officedoctype">
+				<source>Office Doc Type</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_officedoctype.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_officedoctype.master_type">
+				<source>Master Type</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_officedocuments">
+				<source>Office Documents</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_officedocuments.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_officedocuments.file">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_officedocuments.office_id">
+				<source>Office Id</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_officedocuments.document_type">
+				<source>Document Type</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_docmaster">
+				<source>Master Documents</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_docmaster.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_docmaster.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_docmaster.teaser">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_contacttype">
+				<source>Contact Type</source>
+			</trans-unit>
+			<trans-unit id="tx_officeext_domain_model_contacttype.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="general_text.btn_overview">
+				<source>Back To Overview</source>
+				Felder erforderlich
+			</trans-unit>
+			<trans-unit id="general_text.required_fields">
+				<source>*Fields Required</source>
+			</trans-unit>
+			<trans-unit id="general_text.query_form_error_head">
+				<source>Success title</source>
+			</trans-unit>
+			<trans-unit id="general_text.query_form_error_email">
+				<source>email: must be a valid email address</source>
+			</trans-unit>
+			<trans-unit id="general_text.submit_text">
+				<source>SUBMIT</source>
+			</trans-unit>
+			<trans-unit id="general_text.country_box">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="general_text.btn_send">
+				<source>SEND A MESSAGE</source>
+			</trans-unit>
+			<trans-unit id="general_text.industry_default">
+				<source>Select an Industry</source>
+			</trans-unit>
+			<trans-unit id="general_text.more_info">
+				<source>More Information</source>
+			</trans-unit>
+			<trans-unit id="general_text.breadcrumb_text">
+				<source>Worldwide Locations</source>
+			</trans-unit>
+			<trans-unit id="general_text.industry_single">
+				<source>location/production site</source>
+			</trans-unit>
+			<trans-unit id="general_text.industry_multiple">
+				<source>locations/production sites</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

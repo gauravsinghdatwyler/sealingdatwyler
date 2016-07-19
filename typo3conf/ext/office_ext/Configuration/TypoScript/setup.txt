@@ -1,0 +1,55 @@
+
+plugin.tx_officeext_branchfilter {
+	view {
+		templateRootPaths.0 = {$plugin.tx_officeext_branchfilter.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_officeext_branchfilter.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_officeext_branchfilter.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_officeext_branchfilter.persistence.storagePid}
+	}
+	settings{
+		singleContactPage = {$plugin.tx_officeext_branchfilter.persistence.singleContact}
+	}
+}
+
+plugin.tx_officeext_contactfilter {
+	view {
+		templateRootPaths.0 = {$plugin.tx_officeext_contactfilter.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_officeext_contactfilter.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_officeext_contactfilter.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_officeext_contactfilter.persistence.storagePid}
+	}
+
+	settings{
+		singleContactPage = {$plugin.tx_officeext_contactfilter.persistence.singleContact}
+	}
+}
+
+
+plugin.tx_officeext_singlecontact {
+	view {
+		templateRootPaths.0 = {$plugin.tx_officeext_singlecontact.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_officeext_singlecontact.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_officeext_singlecontact.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_officeext_singlecontact.persistence.storagePid}
+	}
+
+	settings{
+		adminEmail = {$plugin.tx_officeext_singlecontact.persistence.adminEmail}
+	}
+}
+
+page.includeCSS {
+	filterStyle = EXT:office_ext/Resources/Public/css/filter.css
+}
+
+
+page.includeJS {	
+	mixitup = EXT:office_ext/Resources/Public/js/jquery.mixitup.min.js
+	filterScript = EXT:office_ext/Resources/Public/js/filter.js	
+}

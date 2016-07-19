@@ -1,0 +1,52 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Content"/>
+<f:section name="Configuration">
+	<flux:form id="ProductGroups" label="Product Groups FCE">
+		<flux:field.input name="heading" label="Heading" />
+		<flux:form.section name="blocks" label="Product Groups">
+			<flux:form.object name="block" label="Block">
+				<flux:field.file name="image" label="Image" uploadFolder="uploads/pics/" validate="trim" size="1" showThumbnails="1" maxItems="1" allowed="jpg,png,gif,jpeg,svg" />
+				<flux:field.input name="title" label="Title" />
+				<flux:field.input name="link" label="Link">
+					<flux:wizard.link activeTab="page" />
+				</flux:field.input>
+			</flux:form.object>
+		</flux:form.section>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>Product Groups FCE</b>
+</f:section>
+
+<f:section name="Main">
+	<div class="clearfix button-link-list teaser-wrapper">
+		<div class="content">
+			<div class="clearfix button-link-list-area teaser-wrapper">
+				<h2>{heading}</h2>
+				<div class="content">
+					<f:for each="{blocks}" as="block" iteration="itemIteration">
+					<div class="button-link-list-item-with-image teaser">
+						<f:link.typolink parameter="{block.block.link}">
+							<div class="image">
+								<f:image src="uploads/pics/{block.block.image}" alt="{block.block.title}"/>
+							</div>
+							<div class="text">
+								{block.block.title}
+								<span class="more"><f:cObject typoscriptObjectPath="lib.productgroup_more" /></span>
+							</div>
+						</f:link.typolink>
+					</div>
+					</f:for>
+				</div>
+			</div>
+		</div>
+	</div>
+</f:section>
+
+
+
+
+

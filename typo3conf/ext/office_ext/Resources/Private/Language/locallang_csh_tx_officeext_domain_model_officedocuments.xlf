@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-04-08T15:03:36Z" product-name="office_ext">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="file.description">
+				<source>file</source>
+			</trans-unit>
+			<trans-unit id="office_id.description">
+				<source>officeId</source>
+			</trans-unit>
+			<trans-unit id="document_type.description">
+				<source>documentType</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

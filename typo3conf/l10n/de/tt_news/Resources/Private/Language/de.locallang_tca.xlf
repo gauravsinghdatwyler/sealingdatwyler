@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2016-02-01T08:22:08Z" product-name="tt_news" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="tt_news" xml:space="preserve">
+        <source>News</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.tabs.special" xml:space="preserve">
+        <source>Special</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.tabs.media" xml:space="preserve">
+        <source>Media</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.tabs.catAndRels" xml:space="preserve">
+        <source>Categories &amp; Relations</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.tabs.categories" xml:space="preserve">
+        <source>Categories</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.tabs.access" xml:space="preserve">
+        <source>Access</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.tabs.extended" xml:space="preserve">
+        <source>Extended</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.uid" xml:space="preserve">
+        <source>ID:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.tstamp" xml:space="preserve">
+        <source>Last change:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pid" xml:space="preserve">
+        <source>Page:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.type.I.0" xml:space="preserve">
+        <source>News</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.type.I.1" xml:space="preserve">
+        <source>Link internal Page</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.type.I.2" xml:space="preserve">
+        <source>Link external URL</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.datetime" xml:space="preserve">
+        <source>Date/Time:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.archivedate" xml:space="preserve">
+        <source>Archive date:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.no_auto_pb" xml:space="preserve">
+        <source>No automatic pagebreaks for this record</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.manageCategories" xml:space="preserve">
+        <source>Open tt_news category manager</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.editCategory" xml:space="preserve">
+        <source>edit category</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.editDefLangVersion" xml:space="preserve">
+        <source>edit default language version of this article</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.imagealttext" xml:space="preserve">
+        <source>Image alttext</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.imagetitletext" xml:space="preserve">
+        <source>Image titletext</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.related" xml:space="preserve">
+        <source>Related news:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.random" xml:space="preserve">
+        <source>Randomize 0rder</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.category" xml:space="preserve">
+        <source>Category:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news_cat" xml:space="preserve">
+        <source>News category</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news_cat.image" xml:space="preserve">
+        <source>Category image</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news_cat.createNewParentCategory" xml:space="preserve">
+        <source>create new parent category</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news_cat.listCategories" xml:space="preserve">
+        <source>list categories</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news_cat.title_lang_ol" xml:space="preserve">
+        <source>title language overlays</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news_cat.parent_category" xml:space="preserve">
+        <source>Parent category</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news_cat.shortcut" xml:space="preserve">
+        <source>News category shortcut</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news_cat.shortcut_target" xml:space="preserve">
+        <source>Target for news category shortcut</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news_cat.single_pid" xml:space="preserve">
+        <source>Single-view page for news from this category</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news_cat.description" xml:space="preserve">
+        <source>Description</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.sheet_general" xml:space="preserve">
+        <source>General Settings</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.sheet_template" xml:space="preserve">
+        <source>Template</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.sheet_category" xml:space="preserve">
+        <source>Category Settings</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.sheet_misc" xml:space="preserve">
+        <source>Other Settings</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.what_to_display" xml:space="preserve">
+        <source>What to display:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.codeFromTS" xml:space="preserve">
+        <source>Defined by TypoScript</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.LIST" xml:space="preserve">
+        <source>Standard list view (LIST)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.LIST2" xml:space="preserve">
+        <source>Advanced list view with 6 alternating template parts (LIST2)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.LIST3" xml:space="preserve">
+        <source>Standard list view with 3 alternating template parts (LIST3)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.LATEST" xml:space="preserve">
+        <source>Latest view (LATEST)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.SINGLE" xml:space="preserve">
+        <source>Detail view (SINGLE)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.SINGLE2" xml:space="preserve">
+        <source>Advanced detail view with 3 image markers (SINGLE2)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.HEADER_LIST" xml:space="preserve">
+        <source>Header list without images (HEADER_LIST)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.AMENU" xml:space="preserve">
+        <source>Archive menu (AMENU)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.SEARCH" xml:space="preserve">
+        <source>Searchform with result list (SEARCH)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.CATMENU" xml:space="preserve">
+        <source>Category menu (CATMENU)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.listOrderby" xml:space="preserve">
+        <source>"Order by" this field (LIST &amp; LATEST):</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.ascDesc" xml:space="preserve">
+        <source>Ascending or Descending (LIST &amp; LATEST):</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.ascDesc_asc" xml:space="preserve">
+        <source>Ascending</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.ascDesc_desc" xml:space="preserve">
+        <source>Descending</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.select_deselect_categories" xml:space="preserve">
+        <source>Category mode:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.itemsHeader" xml:space="preserve">
+        <source>Special options:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.category_selection_notCategorized" xml:space="preserve">
+        <source>[not categorized]</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.category_selection" xml:space="preserve">
+        <source>Category selection</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.category_selection_showAll" xml:space="preserve">
+        <source>Show all (don't care about selection below)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.category_selection_showSelected" xml:space="preserve">
+        <source>Show items with selected categories (OR)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.category_selection_showSelectedAND" xml:space="preserve">
+        <source>Show items with selected categories (AND)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.category_selection_DontShowSelected" xml:space="preserve">
+        <source>Do NOT show items with selected categories (AND)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.category_selection_DontShowSelectedOR" xml:space="preserve">
+        <source>Do NOT show items with selected categories (OR)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.useSubCategories" xml:space="preserve">
+        <source>Use subcategories</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.useSubCategories_TS" xml:space="preserve">
+        <source>Defined by TypoScript</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.yes" xml:space="preserve">
+        <source>Yes</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.no" xml:space="preserve">
+        <source>No</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.archive" xml:space="preserve">
+        <source>Archive setting (for LIST)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.template_file" xml:space="preserve">
+        <source>Template file</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.template_file_ref" xml:space="preserve">
+        <source>Template file reference</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.catImageMode" xml:space="preserve">
+        <source>Category Image Link Mode:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.catTextMode" xml:space="preserve">
+        <source>Category Text Link Mode:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.recursive" xml:space="preserve">
+        <source>Recursive level selection:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.recursive.I.0" xml:space="preserve">
+        <source>0 levels</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.recursive_TS" xml:space="preserve">
+        <source>Defined by TypoScript</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.catImageMaxWidth" xml:space="preserve">
+        <source>Max width of category image:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.catImageMaxHeight" xml:space="preserve">
+        <source>Max height of category image:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.maxCatImages" xml:space="preserve">
+        <source>Max number of category images:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.maxTextLength" xml:space="preserve">
+        <source>Max length of category text:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.maxCatTexts" xml:space="preserve">
+        <source>Max number of categorys texts:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.PIDitemDisplay" xml:space="preserve">
+        <source>PageId for single news display:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.backPid" xml:space="preserve">
+        <source>PageId to return to:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.archive_nonarc" xml:space="preserve">
+        <source>SHOW NON-ARCHIVED</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.archive_arc" xml:space="preserve">
+        <source>SHOW ARCHIVED</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.archive_dontcare" xml:space="preserve">
+        <source>Don't Care</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.catLinkMode_TS" xml:space="preserve">
+        <source>Defined by TypoScript</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.catLinkMode_dontshow" xml:space="preserve">
+        <source>Don't display at all</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.catLinkMode_shownolink" xml:space="preserve">
+        <source>Display, but no links</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.catLinkMode_catshortcut" xml:space="preserve">
+        <source>Acts as link to category shortcuts</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.catLinkMode_catsel" xml:space="preserve">
+        <source>Acts as a category selector</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.firstImageIsPreview" xml:space="preserve">
+        <source>Don't display first image in single view (firstImageIsPreview)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.forceFirstImageIsPreview" xml:space="preserve">
+        <source>Don't display first image in single view (forceFirstImageIsPreview) even when only one image is available</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.limit" xml:space="preserve">
+        <source>Limit: max items for LIST and LATEST</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.listStartId" xml:space="preserve">
+        <source>List StartId: Force LIST or LATEST to start from this item</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.noPageBrowser" xml:space="preserve">
+        <source>Don't display Pagebrowser in LIST</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.imageMaxWidth" xml:space="preserve">
+        <source>Max width for images in news records (accepts optionSplit)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.imageMaxHeight" xml:space="preserve">
+        <source>Max height for images in news records (accepts optionSplit)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.altLayoutsOptionSplit" xml:space="preserve">
+        <source>Template part number / optionSplit of template part numbers</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.alternatingLayouts" xml:space="preserve">
+        <source>Number of alternating template parts (is ignored if "Template part number / optionSplit" is set)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.croppingLenght" xml:space="preserve">
+        <source>stdWrap.crop for the subheader (short)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.croppingLenghtOptionSplit" xml:space="preserve">
+        <source>OptionSplit for cropping lenght of subheader (overwrites lenght parameter from stdWrap.crop)</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.maxWordsInSingleView" xml:space="preserve">
+        <source>insert pagebreak in SINGLE after this number of words</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.startingpoint" xml:space="preserve">
+        <source>Page(s) with tt_news records</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.pi_flexform.tsconfig" xml:space="preserve">
+        <source>Typoscript for this content element (plugin.tt_news.[your TS])</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.categorymounts" xml:space="preserve">
+        <source>tt_news: allowed/visible categories</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.treeSelect.msg_notInGRSP" xml:space="preserve">
+        <source>The current category is not located in the "general record storage page" but "useStoragePid" is activated in tt_news configuration. Selecting a parent category from a different pid is not supported.</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.treeSelect.msg_emptyTree" xml:space="preserve">
+        <source>No categories found in page: ###PID###</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.treeSelect.translOrgCat" xml:space="preserve">
+        <source>Categories from the translation original of this record:</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.treeSelect.translOrgNoCat" xml:space="preserve">
+        <source>The translation original of this record has no categories assigned.</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.treeSelect.pageTitleSuffix" xml:space="preserve">
+        <source>[pid: %s]</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.treeSelect.pageTitleSuffixNoGrsp" xml:space="preserve">
+        <source>[from all pages]</source>
+      <target></target></trans-unit>
+      <trans-unit id="tt_news.treeSelect.treeTitle" xml:space="preserve">
+        <source>News categories</source>
+      <target></target></trans-unit>
+    </body>
+  </file>
+</xliff>

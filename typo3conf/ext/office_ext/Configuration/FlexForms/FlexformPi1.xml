@@ -1,0 +1,57 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<main>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Single Contact Display</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.flexform.main.form>
+						<TCEforms>
+							<label>Select Contact</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items type="array">
+
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+								<foreign_table>tx_officeext_domain_model_contactperson</foreign_table>
+								<foreign_table_where>AND tx_officeext_domain_model_contactperson.deleted = 0
+									AND tx_officeext_domain_model_contactperson.hidden = 0
+									AND tx_officeext_domain_model_contactperson.sys_language_uid IN (-1,0)
+									order by tx_officeext_domain_model_contactperson.name</foreign_table_where>
+								<wizards>
+									<add>
+										<type>script</type>
+										<title>Add Contact</title>
+										<icon></icon>
+										<params>
+											<table>tx_officeext_domain_model_contactperson</table>
+											<pid>###CURRENT_PID###</pid>
+											<setValue>set</setValue>
+										</params>
+										<module>
+											<name>wizard_add</name>
+										</module>
+									</add>
+									<suggest>
+										<title>Add Form</title>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+								<itemsProcFunc>In2code\officeext\Utility\Tca\FormSelectorUserFunc->getForms</itemsProcFunc>
+							</config>
+						</TCEforms>
+					</settings.flexform.main.form>
+				</el>
+			</ROOT>
+		</main>
+	</sheets>
+</T3DataStructure>

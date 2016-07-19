@@ -1,0 +1,15 @@
+
+plugin.tx_productfinder_pi1 {
+	view {
+		# cat=plugin.tx_productfinder_pi1/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:productfinder/Resources/Private/Templates/
+		# cat=plugin.tx_productfinder_pi1/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:productfinder/Resources/Private/Partials/
+		# cat=plugin.tx_productfinder_pi1/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:productfinder/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_productfinder_pi1//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

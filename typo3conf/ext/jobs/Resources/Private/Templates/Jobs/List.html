@@ -1,0 +1,58 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+<div class="jobfinder">
+	<div class="filters">
+		<div class="jobs_filter">
+			<div class="status filter">
+			</div>
+			<div class="function filter">
+				<f:form.select name="jobfunction" id="jobfunction" options="{jobfields}" value="{ajaxjobsArguments.jobfunction}" optionValueField="name" optionLabelField="name"  prependOptionLabel="{f:translate(key: 'tx_jobs_domain_model_jobs.jobfunction.prependOptionLabel')}" prependOptionValue=""/>
+			</div>
+			<div class="countries filter">
+				<f:form.select name="country" id="country" options="{countrys}" value="{ajaxjobsArguments.country}" optionValueField="name" optionLabelField="name"  prependOptionLabel="{f:translate(key: 'tx_jobs_domain_model_jobs.country.prependOptionLabel')}" prependOptionValue=""/>
+			</div>
+			<f:form.hidden name="psetconf" id="psetconf" value="{settings.storageFolderPid},{settings.jobsDetailPid}"></f:form.hidden>
+		</div>
+	</div>
+	<div class="content">
+		<f:for each="{jobss}" as="jobs" key="townname">
+			<f:for each="{jobs}" as="jobstown" key="countryname">
+			<div>
+				<div class="branch-office">{countryname}, {townname}</div>
+				<ul class="jobs">
+					<f:for each="{jobstown}" as="jobstitle">
+					<li class="job list-item" data-function="{jobstitle.jobfield.name}" data-country="{countryname}">
+						<f:link.action pageUid="{settings.jobsDetailPid}" action="show" arguments="{jobs : jobstitle}">
+						<span class="title">
+							<p><strong>{jobstitle.title}</strong></p>
+						</span>
+						<span class="country">{countryname} {townname}</span>
+						</f:link.action>
+					</li>
+					</f:for>
+				</ul>
+			</div>
+			</f:for>
+		</f:for>
+	</div>
+</div>
+<div id="various-translations" style="display: none;">
+	<span id="translations-key-job"><f:translate key="tx_jobs_domain_model_jobs.jobCount" /></span>
+	<span id="translations-key-jobs"><f:translate key="tx_jobs_domain_model_jobs.jobCounts" /></span>	
+</div>
+</f:section>
+

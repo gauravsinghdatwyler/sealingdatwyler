@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="de" type="array">
+		<label index=".alttitle"/>
+		<label index=".description"/>
+		<label index=".details"/>
+		<label index="_.seeAlso"/>
+		<label index="folders.alttitle"/>
+		<label index="folders.description"/>
+		<label index="folders.details"/>
+		</languageKey>
+  </data>
+</T3locallangExt>

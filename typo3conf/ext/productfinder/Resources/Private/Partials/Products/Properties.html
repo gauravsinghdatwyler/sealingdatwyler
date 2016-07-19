@@ -1,0 +1,97 @@
+	<h2>{products.name}</h2>
+	<div class="info">
+		<f:format.html>{products.description}</f:format.html>
+		<div class="specifications">
+			<dl>
+				<f:if condition="{products.application}">
+					<dt><f:translate key="tx_productfinder_domain_model_products.application" />:</dt>
+					<dd>
+						<f:for each="{products.application}" as="app" iteration="itemIterator">
+							<f:if condition="{itemIterator.isLast}">
+								<f:then>{app.name}</f:then>
+								<f:else>{app.name}, </f:else>
+							</f:if>
+						</f:for>
+					</dd>
+				</f:if>
+
+				<f:if condition="{products.size}">
+					<dt><f:translate key="tx_productfinder_domain_model_products.size" />:</dt>
+					<dd>{products.size.name}</dd>
+				</f:if>
+
+				<f:if condition="{products.material}">
+					<dt><f:translate key="tx_productfinder_domain_model_products.material" />:</dt>
+					<dd>{products.material.name}</dd>
+				</f:if>
+
+				<f:if condition="{products.type}">
+					<dt><f:translate key="tx_productfinder_domain_model_products.type" />:</dt>
+					<dd>{products.type.name}</dd>
+				</f:if>
+			</dl>
+		</div>
+	</div>
+	<figure class="image">
+		<f:image src="{products.image.originalResource.publicUrl}" />
+	</figure>
+	<f:if condition="{products.pdfs->f:count()}">
+		<div class="downloads">
+			<h2><f:translate key="label.detailview.download" /></h2>
+			<ul class="public">
+				<f:for each="{publicPDF}" as="pdf">
+					<f:if condition="{pdf.file.originalResource.uid}">
+						<li class="download">
+			                <a href="{pdf.file.originalResource.publicUrl}" target="_blank">
+			                	<figure>
+			                		<img src="{f:uri.resource(path:'images/vignette-document-download.png', extensionName:'website_template')}">
+			                	</figure>
+			                	<div class="text">
+			                		<span class="title">{pdf.title}</span>
+			                		<span class="extension"><f:translate key="label.detailview.PDFdownload" /></span>
+			                		<span class="link">{pdf.file.originalResource.name}</span>
+			                	</div>
+			                </a>
+			            </li>
+	                </f:if>
+				</f:for>
+			</ul>
+			
+				<f:if condition="{loginStatus}">
+					<f:then>
+						<ul class="public">
+						<f:for each="{privatePDF}" as="pdf">
+							<f:if condition="{pdf.file.originalResource.uid}">
+								<li class="download">
+					                <a href="{pdf.file.originalResource.publicUrl}"  target="_blank" >
+					                	<figure>
+					                		<img src="{f:uri.resource(path:'images/vignette-document-download.png', extensionName:'website_template')}">
+					                	</figure>
+					                	<div class="text">
+					                		<span class="title">{pdf.title}</span>
+					                		<span class="extension"><f:translate key="label.detailview.PDFdownload" /></span>
+					                		<span class="link">{pdf.file.originalResource.name}</span>
+					                	</div>
+					                </a>
+					            </li>
+			                </f:if>
+						</f:for>
+						</ul>
+					</f:then>
+					<f:else>
+						<ul class="private">
+						<f:for each="{privatePDF}" as="pdf">
+							<f:if condition="{pdf.file.originalResource.uid}">
+								<li class="download">
+					                <a href="javascript:void(0);">
+					                	<div class="text"><f:translate key="label.detailview.secureDownloadAvailableLabel" /></div>
+					                </a>
+					            </li>
+			                </f:if>
+						</f:for>
+						</ul>
+					</f:else>
+				</f:if>
+			
+		</div>
+	</f:if>

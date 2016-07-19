@@ -1,0 +1,67 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+
+<f:layout name="Detail.html" />
+
+<!--
+	=====================
+		News/Detail.html
+-->
+
+<f:section name="content">
+	<f:if condition="{newsItem}">
+		<f:then>
+			<n:format.nothing>
+				<f:if condition="{newsItem.alternativeTitle}">
+					<f:then>
+						<n:titleTag>
+							<n:format.htmlentitiesDecode>{newsItem.alternativeTitle}</n:format.htmlentitiesDecode>
+						</n:titleTag>
+					</f:then>
+					<f:else>
+						<n:titleTag>
+							<n:format.htmlentitiesDecode>{newsItem.title}</n:format.htmlentitiesDecode>
+						</n:titleTag>
+					</f:else>
+				</f:if>
+				<f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
+			</n:format.nothing>
+			
+			<div class="info">
+				<span class="date"><f:format.date format="d. M Y">{newsItem.datetime}</f:format.date></span>
+				<span class="title">{newsItem.title}</span>
+			</div>
+			
+			
+			<div class="content">
+				<span class="text">
+					<f:if condition="{newsItem.contentElements}">
+						<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
+					</f:if>
+					
+					<f:render partial="Detail/FalMediaContainer" arguments="{media: newsItem.falMedia, settings:settings}" />
+					
+					<div class="news-text-wrap" itemprop="articleBody">
+						<f:format.html>{newsItem.bodytext}</f:format.html>
+					</div>
+					
+					
+					<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}" />
+
+					<br /><br /><br />
+					<f:if condition="{settings.backPid}">
+						
+						<div class="news-backlink-wrap">
+							<f:link.page pageUid="{settings.backPid}">
+								« <f:translate key="back-link" />
+							</f:link.page>
+						</div>
+					</f:if>
+				</span>
+			</div>
+			
+		</f:then>
+		<f:else>
+
+		</f:else>
+	</f:if>
+</f:section>

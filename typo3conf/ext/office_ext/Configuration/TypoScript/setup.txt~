@@ -1,0 +1,24 @@
+
+plugin.tx_officeext_branchfilter {
+	view {
+		templateRootPaths.0 = {$plugin.tx_officeext_branchfilter.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_officeext_branchfilter.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_officeext_branchfilter.view.layoutRootPath}
+	}
+	persistence {
+		storagePID = {$plugin.tx_officeext_branchfilter.persistence.storagePID}
+	}
+
+	settings{
+		adminEmail = {$plugin.tx_officeext_branchfilter.persistence.adminEmail}	
+	}
+}
+
+page.includeCSS {
+		filterStyle = EXT:office_ext/Resources/Public/css/filter.css
+}
+
+page.includeJS {
+	jquery = EXT:office_ext/Resources/Public/js/jquery-1.11.3.min.js
+	filterScript = EXT:office_ext/Resources/Public/js/filter.js
+}

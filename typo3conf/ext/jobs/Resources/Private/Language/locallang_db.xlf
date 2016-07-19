@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-04-19T10:43:37Z" product-name="jobs">
+		<header/>
+		<body>
+			<trans-unit id="tx_jobs_domain_model_country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_country.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobfield">
+				<source>Job Function</source>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobfield.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs">
+				<source>Jobs</source>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.jobfield">
+				<source>Job Function</source>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.town">
+				<source>Town</source>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.email">
+				<source>E-mail</source>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_town">
+				<source>Town</source>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_town.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_town.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_jobs_domain_model_jobs.applyjob">
+				<source>Apply Job</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

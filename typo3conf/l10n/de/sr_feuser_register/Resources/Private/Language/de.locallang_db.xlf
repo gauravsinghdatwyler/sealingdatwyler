@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2014-08-24T08:29:05Z" product-name="sr_feuser_register" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="tt_content.list_type" xml:space="preserve" approved="yes">
+        <source>Front End User Registration</source>
+      <target state="translated">Frontend-Benutzerregistrierung</target></trans-unit>
+      <trans-unit id="tt_content.pi1_flexform.display_mode" xml:space="preserve" approved="yes">
+        <source>Display mode</source>
+      <target state="translated">Anzeigemodus</target></trans-unit>
+      <trans-unit id="tt_content.pi1_flexform.display_mode.1" xml:space="preserve" approved="yes">
+        <source>Default</source>
+      <target state="translated">Standard</target></trans-unit>
+      <trans-unit id="tt_content.pi1_flexform.display_mode.3" xml:space="preserve" approved="yes">
+        <source>Create</source>
+      <target state="translated">Anlegen</target></trans-unit>
+      <trans-unit id="tt_content.pi1_flexform.display_mode.4" xml:space="preserve" approved="yes">
+        <source>Delete</source>
+      <target state="translated">Löschen</target></trans-unit>
+      <trans-unit id="tt_content.pi1_flexform.display_mode.5" xml:space="preserve" approved="yes">
+        <source>Invite</source>
+      <target state="translated">Einladen</target></trans-unit>
+      <trans-unit id="tt_content.pi1_flexform.display_mode.7" xml:space="preserve" approved="yes">
+        <source>Edit</source>
+      <target state="translated">Bearbeiten</target></trans-unit>
+      <trans-unit id="tt_content.pi1_flexform.display_mode.8" xml:space="preserve" approved="yes">
+        <source>Setfixed</source>
+      <target state="translated">Parameter-Kommando</target></trans-unit>
+      <trans-unit id="tt_content.pi1_flexform.display_mode.9" xml:space="preserve" approved="yes">
+        <source>Infomail</source>
+      <target state="translated">E-Mail-Benachrichtigung</target></trans-unit>
+      <trans-unit id="fe_users.cnum" xml:space="preserve" approved="yes">
+        <source>Customer Number:</source>
+      <target state="translated">Kundennummer:</target></trans-unit>
+      <trans-unit id="fe_users.house_no" xml:space="preserve">
+        <source>House Number:</source>
+      <target/><alt-trans xml:space="preserve" origin="dm_lk"><target>Hausnummer</target></alt-trans></trans-unit>
+      <trans-unit id="fe_users.static_info_country" xml:space="preserve" approved="yes">
+        <source>Country Code:</source>
+      <target state="translated">Ländercode:</target></trans-unit>
+      <trans-unit id="fe_users.zone" xml:space="preserve" approved="yes">
+        <source>State/province:</source>
+      <target state="translated">Bundesland/Staat/Provinz:</target></trans-unit>
+      <trans-unit id="fe_users.language" xml:space="preserve" approved="yes">
+        <source>Language:</source>
+      <target state="translated">Sprache:</target></trans-unit>
+      <trans-unit id="fe_users.first_name" xml:space="preserve" approved="yes">
+        <source>First Name:</source>
+      <target state="translated">Vorname:</target></trans-unit>
+      <trans-unit id="fe_users.last_name" xml:space="preserve" approved="yes">
+        <source>Last Name:</source>
+      <target state="translated">Nachname:</target></trans-unit>
+      <trans-unit id="fe_users.module_sys_dmail_newsletter" xml:space="preserve">
+        <source>Activate Newsletter</source>
+      <target/><alt-trans xml:space="preserve" origin="dm_lk"><target>Newsletter aktivieren</target></alt-trans></trans-unit>
+      <trans-unit id="fe_users.module_sys_dmail_category" xml:space="preserve">
+        <source>Subscribe to categories</source>
+      <target/><alt-trans xml:space="preserve" origin="dm_lk"><target>Kategorien abonnieren</target></alt-trans></trans-unit>
+      <trans-unit id="fe_users.module_sys_dmail_html" xml:space="preserve" approved="yes">
+        <source>Receive emails in HTML format?</source>
+      <target state="translated">E-Mails im HTML-Format erhalten?</target></trans-unit>
+      <trans-unit id="fe_users.date_of_birth" xml:space="preserve" approved="yes">
+        <source>Date of birth:</source>
+      <target state="translated">Geburtsdatum:</target></trans-unit>
+      <trans-unit id="fe_users.gender" xml:space="preserve" approved="yes">
+        <source>Mr/Ms:</source>
+      <target state="translated">Hr./Fr.:</target></trans-unit>
+      <trans-unit id="fe_users.gender.I.0" xml:space="preserve" approved="yes">
+        <source>Mr</source>
+      <target state="translated">Hr.</target></trans-unit>
+      <trans-unit id="fe_users.gender.I.1" xml:space="preserve" approved="yes">
+        <source>Ms</source>
+      <target state="translated">Fr.</target></trans-unit>
+      <trans-unit id="fe_users.gender.I.99" xml:space="preserve">
+        <source>  </source>
+      <target/></trans-unit>
+      <trans-unit id="fe_users.status" xml:space="preserve" approved="yes">
+        <source>Status:</source>
+      <target state="translated">Status:</target></trans-unit>
+      <trans-unit id="fe_users.status.I.0" xml:space="preserve">
+        <source> </source>
+      <target/></trans-unit>
+      <trans-unit id="fe_users.status.I.1" xml:space="preserve" approved="yes">
+        <source>Student</source>
+      <target state="translated">Student</target></trans-unit>
+      <trans-unit id="fe_users.status.I.2" xml:space="preserve" approved="yes">
+        <source>Job seeking full time</source>
+      <target state="translated">Schüler</target></trans-unit>
+      <trans-unit id="fe_users.status.I.3" xml:space="preserve" approved="yes">
+        <source>Working</source>
+      <target state="translated">Angestellt</target></trans-unit>
+      <trans-unit id="fe_users.status.I.4" xml:space="preserve" approved="yes">
+        <source>Retired</source>
+      <target state="translated">Selbstständig</target></trans-unit>
+      <trans-unit id="fe_users.status.I.5" xml:space="preserve" approved="yes">
+        <source>Job seeking half time</source>
+      <target state="translated">halbtags beschäftigt</target></trans-unit>
+      <trans-unit id="fe_users.comments" xml:space="preserve" approved="yes">
+        <source>Comments:</source>
+      <target state="translated">Kommentare:</target></trans-unit>
+      <trans-unit id="fe_users.by_invitation" xml:space="preserve" approved="yes">
+        <source>Was invited:</source>
+      <target state="translated">Wurde eingeladen:</target></trans-unit>
+      <trans-unit id="fe_users.terms_acknowledged" xml:space="preserve" approved="yes">
+        <source>The terms have been acknowledged:</source>
+      <target state="translated">Die Bedingungen wurden angenommen:</target></trans-unit>
+      <trans-unit id="fe_users.token" xml:space="preserve" approved="yes">
+        <source>Security Token</source>
+      <target state="translated">Sicherheitstoken</target></trans-unit>
+      <trans-unit id="fe_users.tx_srfeuserregister_password" xml:space="preserve">
+        <source>Encrypted auto-login password</source>
+      <target/><alt-trans xml:space="preserve" origin="dm_lk"><target>Auto-Login Passwort verschlüsseln</target></alt-trans></trans-unit>
+      <trans-unit id="fe_groups_language_overlay" xml:space="preserve" approved="yes">
+        <source>User Group Alternative Language</source>
+      <target state="translated">Alternative Sprache Benutzergruppe</target></trans-unit>
+      <trans-unit id="fe_groups_language_overlay.title" xml:space="preserve" approved="yes">
+        <source>Translated user group name</source>
+      <target state="translated">Übersetzter Name Benutzergruppe</target></trans-unit>
+    </body>
+  </file>
+</xliff>

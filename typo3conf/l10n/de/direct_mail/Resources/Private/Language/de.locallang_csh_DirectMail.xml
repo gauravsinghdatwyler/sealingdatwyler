@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="de" type="array">
+		<label index=".alttitle"/>
+		<label index=".description"/>
+		<label index=".details"/>
+		<label index="_.seeAlso"/>
+		<label index="assign_categories.alttitle"/>
+		<label index="assign_categories.description"/>
+		<label index="assign_categories.details"/>
+		<label index="assign_categories.seeAlso"/>
+		<label index="create_directmail_from_nl.alttitle"/>
+		<label index="create_directmail_from_nl.description"/>
+		<label index="create_directmail_from_nl.seeAlso"/>
+		<label index="create_directmail_from_url.alttitle"/>
+		<label index="create_directmail_from_url.description"/>
+		<label index="create_directmail_from_url.seeAlso"/>
+		<label index="create_newsletter.alttitle"/>
+		<label index="create_newsletter.description"/>
+		<label index="create_newsletter.details"/>
+		<label index="directmail_actions.alttitle"/>
+		<label index="directmail_actions.description"/>
+		<label index="directmail_actions.details"/>
+		<label index="directmail_actions.seeAlso"/>
+		<label index="folders.alttitle"/>
+		<label index="folders.description"/>
+		<label index="folders.details"/>
+		<label index="select_directmail.description"/>
+		<label index="select_directmail.seeAlso"/>
+		<label index="select_newsletter.alttitle"/>
+		<label index="select_newsletter.description"/>
+		<label index="select_newsletter.details"/>
+		</languageKey>
+  </data>
+</T3locallangExt>

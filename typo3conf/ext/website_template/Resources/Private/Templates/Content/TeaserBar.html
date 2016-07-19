@@ -1,0 +1,44 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Content"/>
+<f:section name="Configuration">
+	<flux:form id="TeaserBar" label="Teaser Bar FCE">
+			<flux:field.select name="teaserbar" label="Teaser Bar" items="{
+                           0:{0:'Grey Bar',1:'grey'},
+                           1:{0:'Black Bar',1:'black'}
+                           }"
+              />
+			<flux:field.file name="image" label="Image" uploadFolder="uploads/pics/" validate="trim" size="1" showThumbnails="1" maxItems="1" allowed="jpg,png,gif,jpeg,svg" />
+			<flux:field.input name="title" label="Title" />
+			<flux:field.input name="linklabel" label="Label Link" />
+			<flux:field.input name="link" label="Link">
+				<flux:wizard.link activeTab="page" />
+			</flux:field.input>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>Teaser Bar FCE</b>
+</f:section>
+
+<f:section name="Main">
+	<div class="teaser bar-teaser {teaserbar}">
+		<f:if condition="{image}">
+		<div class="image">
+			<f:image src="uploads/pics/{image}" alt="" />
+		</div>
+		</f:if>
+		<f:if condition="{title}">
+		<div class="title">
+			<h2><p>{title}</p></h2>
+		</div>
+		</f:if>
+		<div class="button">
+			<f:link.typolink parameter="{link}">{linklabel}</f:link.typolink>
+		</div>
+	</div>
+</f:section>
+
+
+

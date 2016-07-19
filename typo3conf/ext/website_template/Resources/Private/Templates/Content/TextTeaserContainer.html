@@ -1,0 +1,41 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Content"/>
+<f:section name="Configuration">
+	<flux:form id="TextTeaserContainer" label="Text Teaser Container FCE">
+		<flux:form.section name="blocks" label="Teaser Group Container">
+			<flux:form.object name="block" label="Block">
+				<flux:field.input name="title" label="Title" />
+				<flux:field.text name="text" label="Text" enableRichText="TRUE" />
+				<flux:field.input name="link" label="Link">
+					<flux:wizard.link activeTab="page" />
+				</flux:field.input>
+			</flux:form.object>
+		</flux:form.section>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>Text Teaser Container FCE</b>
+</f:section>
+
+<f:section name="Main">
+	<div id="three-col-teaser-group-1" class="three-col-teaser-group clearfix">
+		
+			<f:for each="{blocks}" as="block" iteration="itemIteration">
+				<div class="row-{itemIteration.cycle}">
+					<div id="tctg-1-teaser-{itemIteration.cycle}" class="teaser text-only">
+						<f:link.typolink parameter="{block.block.link}">
+							<h2><p><f:format.html>{block.block.title}</f:format.html></p></h2>
+							<f:format.html>{block.block.text}</f:format.html>
+							<f:if condition="{block.block.link}">
+								<em class="more"><f:cObject typoscriptObjectPath="lib.teaser_slider_readmore" /></em>
+							</f:if>
+						</f:link.typolink>
+					</div>
+				</div>
+			</f:for>
+		
+	</div>
+</f:section>

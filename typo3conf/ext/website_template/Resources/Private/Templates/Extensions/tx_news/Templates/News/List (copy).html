@@ -1,0 +1,101 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+{namespace grouped=Tx_NewsGroupedByDate_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/List.html
+-->
+
+<f:section name="content">
+	<!--TYPO3SEARCH_end-->
+	<f:if condition="{news}">
+		<f:then>
+			<!-- custom  start-->
+			<f:if condition="{settings.templateLayout} == 1">
+				<f:then>
+					<div class="news">
+						<ul>
+						<f:for each="{news}" as="newsItem" iteration="iterator">
+							<f:render partial="List/Item_newslist" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+						</f:for>
+						</ul>
+						<em class="button"><f:cObject typoscriptObjectPath="lib.Newslist_pid" /></em>
+					</div>
+				</f:then>
+				<!-- custom end -->
+				<f:else>
+					<f:if condition="{settings.templateLayout} == 2">
+						<f:then>
+							<div class="events">
+								<ul>
+								<f:for each="{news}" as="newsItem" iteration="iterator">
+									<f:render partial="List/Item_eventslist" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+								</f:for>
+								</ul>
+								<em class="button"><f:cObject typoscriptObjectPath="lib.eventslist_pid" /></em>
+							</div>
+						</f:then>
+						<f:else>
+							<f:if condition="{settings.templateLayout} == 3">
+								<f:then>
+									<div id="content" role="main">
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="gray-tabs">
+													<ul class="nav nav-tabs" role="tablist">
+														<grouped:groupedForDateTime each="{news}" as="groupedNews" groupBy="datetime" format="Y" groupKey="year">
+															<li><f:link.typolink parameter="#tab-{year}">{year}</f:link.typolink></li>
+														</grouped:groupedForDateTime>
+													</ul>
+												</div>
+												<div class="news-list-container">
+												<grouped:groupedForDateTime each="{news}" as="groupedNews" groupBy="datetime" format="Y" groupKey="year">
+													<div class="test1" id="tab-{year}">
+													<grouped:groupedForDateTime each="{groupedNews}" as="itemsByYear" groupBy="datetime" format="m" dateTimeKey="byMonth">
+														<f:for each="{itemsByYear}" as="newsItem" iteration="iterator">
+															<f:render partial="List/Item_newslisting" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+														</f:for>
+													</grouped:groupedForDateTime>
+													</div>
+												</grouped:groupedForDateTime>
+												</div>
+											</div>
+										</div>
+									</div>
+								</f:then>
+								<f:else>	
+									<div class="news-list-view">
+										<f:if condition="{settings.hidePagination}">
+											<f:then>
+												
+														<f:for each="{news}" as="newsItem" iteration="iterator">
+															<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+														</f:for>
+													
+											</f:then>
+											<f:else>
+												<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+													<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+														<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+													</f:for>
+												</n:widget.paginate>
+											</f:else>
+										</f:if>
+									</div>
+								</f:else>
+							</f:if>
+						</f:else>
+					 </f:if>
+				</f:else>
+		    </f:if>
+		</f:then>
+		<f:else>
+			<div class="no-news-found">
+				<f:translate key="list_nonewsfound" />
+			</div>
+		</f:else>
+	</f:if>
+	<!--TYPO3SEARCH_begin-->
+</f:section>

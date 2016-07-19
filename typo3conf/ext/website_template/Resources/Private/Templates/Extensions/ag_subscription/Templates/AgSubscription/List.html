@@ -1,0 +1,134 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<f:flashMessages />
+<f:if condition="{recordInsert} == 1">
+	<f:then>
+		<p class="alert alert-success subscribed_newsletter">
+		<f:translate key='flexforms_general.subscriptionSuccess.I.0' />
+		</p>
+	</f:then>
+	<f:else>
+		<f:if condition="{subscriptionProcess} == 1">
+			<p class="subscribed_newsletter alert alert-success">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<f:translate key='flexforms_general.subscriptionApproved' /></p>
+		</f:if>
+		<f:if condition="{subscriptionProcess} == -1">
+			<p class="subscribed_newsletter alert alert-info">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<f:translate key='flexforms_general.subscriptionDeleted' /></p>
+		</f:if>
+
+		<f:if condition="{recordInsert} == -1">
+			<p class="subscribed_newsletter alert alert-danger ">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<f:translate key='flexforms_general.subscriptionFailed.I.0' /> <br /><br />
+			<f:translate key='flexforms_general.subscriptionFailed.I.1' />
+		 </p>
+		</f:if>
+
+		<f:if condition="{recordInsert} == -3">
+			<p class="subscribed_newsletter alert alert-info">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<f:translate key='flexforms_general.subscriptionUpdate' />
+		 	</p>
+		</f:if>
+
+		<f:if condition="{recordInsert} == -4">
+			<p class="subscribed_newsletter alert alert-danger">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<f:translate key='flexforms_general.subscribedAlready' />
+		 	</p>
+		</f:if>
+
+		<f:if condition="{recordInsert} == 2">
+			<p class="subscribed_newsletter alert alert-info ">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<f:translate key='flexforms_general.subscriptionInfomail.I.0' /></p>
+		</f:if>
+
+		<f:if condition="{recordInsert} == -2">
+			<p class="subscribed_newsletter alert alert-danger ">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<f:translate key='flexforms_general.noEmailRegistered' /></p>
+		</f:if>
+
+		<f:if condition="{snd} == 'infomail' ">
+			<f:then>
+				<!-- Unsubscribe Form -->
+				<p class="subscribed_newsletter"></p>
+				<form method="post" action="">
+				<f:for each="{agFields}" as="agField">
+					<f:if condition="{agField} == 'email' ">
+						<div class="form-group">
+							<input type="text" id="ag_{agField}" name="{agField}" placeholder="{f:translate(key: 'LLL:EXT:ag_subscription/Resources/Private/Language/locallang_ttaddress_fields.xlf:tt_address.{agField}')} <f:for each="{requiredFields}" as="requiredField"><f:if condition="{requiredField} == {agField}"> *</f:if></f:for> " class="form-control" <f:for each="{requiredFields}" as="requiredField"><f:if condition="{requiredField} == {agField}"> onchange="get_{agField}();" data-require=true</f:if></f:for> />
+
+							<!--<f:for each="{requiredFields}" as="requiredField">
+								<f:if condition="{requiredField} == {agField}"> <span class="error_{agField} errors"></span> </f:if>
+							</f:for>-->
+						</div>
+					</f:if>
+				</f:for>
+				<input type="hidden" name="pid" value="{settings.storageFolder}" />
+				<input type="hidden" name="hidden" value="1" />
+				<input type="hidden" name="module_sys_dmail_html" value="1" />
+				<input type="submit" class="btn button btn-default" value="{f:translate(key: 'flexforms_general.senden')}" onclick = 'return validateFields();'/>
+				</form>
+
+			</f:then>
+			<f:else>
+				<!-- Create Form -->
+
+				<f:if condition="{editId}"><p class="subscribed_newsletter">
+				</p></f:if>
+				<div class="form-wrapper">
+				<form method="post" action="" id="newsletter-form">
+				<div class=error_email>
+						<h1><f:translate key='errortitle' /></h1>
+						<span><f:translate key='errormsg' /><span>
+				</div>
+				<fieldset>
+				<h2> </h2>
+				<f:for each="{agFields}" as="agField">
+					<div class="form-row">
+					<label><span>{f:translate(key: 'LLL:EXT:ag_subscription/Resources/Private/Language/locallang_ttaddress_fields.xlf:tt_address.{agField}')}</span></label>
+						<input type="text" id="ag_{agField}" name="{agField}" required="required" <f:for each="{requiredFields}" as="requiredField"><f:if condition="{requiredField} == {agField}"> *</f:if></f:for> " value="<v:content.resources table='tt_address' field='{agField}'  uid='{editId}' as='field_value'><f:for each="{field_value}" as="val">{val}</f:for></v:content.resources>"  class="form-control" <f:if condition="{agField} == 'email' "><f:if condition="{editId}">	readonly=readonly</f:if></f:if> <f:for each="{requiredFields}" as="requiredField"><f:if condition="{requiredField} == {agField}">  onchange="get_{agField}();" data-require=true</f:if></f:for> />
+
+
+
+						<f:for each="{requiredFields}" as="requiredField">
+							<f:if condition="{requiredField} == {agField}"> <span class="error_{agField} errors"> </f:if>
+						</f:for>
+
+					</div>
+
+
+				</f:for>
+
+				<input type="hidden" name="pid" value="{settings.storageFolder}" />
+				<input type="hidden" name="hidden" value="1" />
+				<input type="hidden" name="module_sys_dmail_html" value="1" />
+				<div class="button-wrapper">
+				<input type="submit" class="btn button btn-default" onclick = 'return validateFields();' value="{f:translate(key: 'LLL:EXT:ag_subscription/Resources/Private/Language/locallang.xlf:flexforms_general.senden')}"/>
+				</div>
+				<f:if condition="{settings.showUnsubscribeLink} == 1">
+					<p>
+						<f:translate key='flexforms_general.frontLink.subscription.I.0' />
+						<a href="{actionUrl}?snd=infomail"><f:translate key='flexforms_general.frontLink.subscription.I.1' /></a>
+					</p>
+				</f:if>
+				</fieldset>
+				</form>
+				</div>
+			</f:else>
+		</f:if>
+	</f:else>
+</f:if>
+</f:section>
+</div>

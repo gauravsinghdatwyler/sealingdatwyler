@@ -1,0 +1,53 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Content"/>
+<f:section name="Configuration">
+	<flux:form id="HomeTeaserSlider" label="Home Teaser Slider FCE">
+		<flux:form.section name="blocks" label="Teaser Slider">
+			<flux:form.object name="block" label="Block">
+				<flux:field.file name="image" label="Image" uploadFolder="uploads/pics/" validate="trim" size="1" showThumbnails="1" maxItems="1" allowed="jpg,png,gif,jpeg,svg" />
+				<flux:field.text name="text" label="Text" enableRichText="TRUE"/>
+				<flux:field.input name="link" label="Link">
+					<flux:wizard.link activeTab="page" />
+				</flux:field.input>
+			</flux:form.object>
+		</flux:form.section>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>Home Teaser Slider FCE</b>
+</f:section>
+
+<f:section name="Main">
+	<div class="teaser-wrapper-paging tw-paging teaser-wrapper">
+		<div class="slider single-item">
+			
+				<f:for each="{blocks}" as="block" iteration="itemIteration">
+				<div>
+					<f:image src="uploads/pics/{block.block.image}" alt="" />
+					<div class="box">
+						<f:format.html>{block.block.text}</f:format.html>
+						<f:if condition="{block.block.link}">
+							<em class="more">
+								<f:link.typolink parameter="{block.block.link}">
+								<f:cObject typoscriptObjectPath="lib.teaser_slider_readmore" />
+								</f:link.typolink>
+							</em>
+						</f:if>
+					</div>
+				</div>
+				</f:for>
+			
+		</div>
+
+		<div class="pagination"></div>
+	</div>
+</f:section>
+
+
+
+
+
+

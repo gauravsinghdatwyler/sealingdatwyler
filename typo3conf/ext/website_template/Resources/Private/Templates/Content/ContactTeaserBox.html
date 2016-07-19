@@ -1,0 +1,52 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Content"/>
+<f:section name="Configuration">
+	<flux:form id="ContactTeaserBox" label="Contact Teaser Box FCE">
+			<flux:field.input name="title" label="Title" />
+			<flux:field.input name="organizationName" label="Organization Name" />
+			<flux:field.input name="telephone" label="Telephone" />
+			<flux:field.input name="email" label="E-mail" />
+			<flux:field.input name="buttontext" label="Button Text" />
+			<flux:field.relation label="Select Contact Person" size="1" minItems="0" table="tx_officeext_domain_model_contactperson" maxItems="1" name="ContactPerson" >
+			</flux:field.relation>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>Contact Teaser Box FCE</b>
+</f:section>
+
+<f:section name="Main">
+	<div id="teaser" class="teaser standard">
+		<h2>{title}</h2>
+		<div class="info">
+		<div class="org">
+			<p class="organization-name">{organizationName}</p>
+		</div>
+		<div>
+			<dl class="tel">
+				<dd class="value">{telephone}</dd>
+			</dl>
+		</div>
+		<div>
+			<dl class="email">
+				<dd class="value"><a href="mailto:{email}">{email}</a></dd>
+			</dl>
+		</div>	
+		</div>
+		<f:if condition="{link}">
+		<div class="button">
+			<f:link.action action="show" arguments="{contactPerson : '{ContactPerson}'}" controller="ContactPerson" extensionName="officeext" pluginName="singleContact" pageUid="111">
+				{buttontext}
+			</f:link.action>		
+		</div>
+		</f:if>
+	</div>
+</f:section>
+	
+
+	
+
+

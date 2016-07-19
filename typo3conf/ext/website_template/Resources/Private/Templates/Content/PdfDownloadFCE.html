@@ -1,0 +1,90 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Content"/>
+<f:section name="Configuration">
+	<flux:form id="PdfDownlaodFCE" label="PDF Download FCE">
+		
+		<flux:field.select name="downloadarea" label="Download Area" items="{
+                           0:{0:'Public',1:'public'},
+                           1:{0:'Private',1:'private'}
+                           }"
+              />
+         <flux:field.input name="heading" label="Heading" />
+		<flux:form.section name="blocks" label="PDF Download FCE">
+			<flux:form.object name="block" label="Block">
+				<flux:field.input name="title" label="Title" />
+				<flux:field.file name="fileupload" label="File Upload" uploadFolder="uploads/download/" size="1" showThumbnails="1" maxItems="1" allowed="pdf" />
+			</flux:form.object>
+		</flux:form.section>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>PDF Download FCE</b>
+</f:section>
+
+<f:section name="Main">
+	<div class="pdfdownload_section">
+		<div class="downloads">
+			<f:if condition="{heading}">
+			<div class="head pdf_head"><h2>{heading}</h2></div>
+			</f:if>
+			<f:if condition="{downloadarea} == 'public'">
+				<f:then>
+					<ul class="public">
+						<f:for each="{blocks}" as="block">
+							<li class="download">
+								<f:link.typolink parameter="uploads/download/{block.block.fileupload}" target="_blank">
+									<figure>
+										<img src="typo3conf/ext/website_template/Resources/Public/images/vignette-document-download.png" alt="" title="">
+									</figure>
+									<div class="text">
+										<span class="title">{block.block.title}</span>
+										<span class="extension">PDF Download</span>
+										<span class="link">{block.block.fileupload}</span>
+									</div>
+								</f:link.typolink>
+							</li>
+						</f:for>
+					</ul>
+				</f:then>
+				<f:else>
+					<f:security.ifAuthenticated>
+					<f:then>
+						<ul class="public">
+							<f:for each="{blocks}" as="blockprivate">
+								<li class="download">
+									<f:link.typolink parameter="uploads/download/{blockprivate.block.fileupload}" target="_blank">
+										<figure>
+											<img src="typo3conf/ext/website_template/Resources/Public/images/vignette-document-download.png" alt="" title="">
+										</figure>	
+										<div class="text">
+											<span class="title">{blockprivate.block.title}</span>
+											<span class="extension">PDF Download</span>
+											<span class="link">{blockprivate.block.fileupload}</span>
+										</div>
+									</f:link.typolink>
+								</li>
+							</f:for>
+						</ul>
+					</f:then>
+					<f:else>
+						<ul class="private">
+							<f:for each="{blocks}" as="blockprivate">
+								<li class="download">		
+									<a href="javascript:void(0)">
+										<div class="text">
+											+ <f:cObject typoscriptObjectPath="lib.secure_downlaod" />
+										</div>
+									</a>
+								</li>
+							</f:for>
+						</ul>
+					</f:else>
+					</f:security.ifAuthenticated>
+				</f:else>
+			</f:if>
+		</div>
+	</div>
+</f:section>

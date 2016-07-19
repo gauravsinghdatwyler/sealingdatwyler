@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="website_template" date="2015-08-08T14:38:32+01:00">
+		<header/>
+		<body>
+			<trans-unit id="pagetree.system">
+				<source>[System] Collection</source>
+			</trans-unit>
+			<trans-unit id="pagetree.menufolder">
+				<source>[System] Menu directory</source>
+			</trans-unit>
+
+			<!-- table classes -->
+			<trans-unit id="tableclasses.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="tableclasses.striped">
+				<source>Striped</source>
+			</trans-unit>
+			<trans-unit id="tableclasses.condensed">
+				<source>Condensed</source>
+			</trans-unit>
+			<trans-unit id="belayout.3col">
+				<source>3 columns</source>
+			</trans-unit>
+			<trans-unit id="belayout.2col">
+				<source>2 columns</source>
+			</trans-unit>
+			<trans-unit id="belayout.columns.main">
+				<source>Main content</source>
+			</trans-unit>
+			<trans-unit id="belayout.columns.left">
+				<source>Left side</source>
+			</trans-unit>
+			<trans-unit id="belayout.columns.right">
+				<source>Right side</source>
+			</trans-unit>
+
+			<!-- Content element: Header Layout -->
+			<trans-unit id="tt_content.header_layout.1">
+				<source>Header 1</source>
+			</trans-unit>
+			<trans-unit id="tt_content.header_layout.2">
+				<source>Header 2</source>
+			</trans-unit>
+			<trans-unit id="tt_content.header_layout.3">
+				<source>Header 3</source>
+			</trans-unit>
+			<trans-unit id="tt_content.header_layout.4">
+				<source>Header 4</source>
+			</trans-unit>
+			<trans-unit id="tt_content.header_layout.5">
+				<source>Header 5</source>
+			</trans-unit>
+
+			<!-- Content element: Layout -->
+			<trans-unit id="tt_content.layout.box-success">
+				<source>Box Success</source>
+			</trans-unit>
+			<trans-unit id="tt_content.layout.box-info">
+				<source>Box Information</source>
+			</trans-unit>
+			<trans-unit id="tt_content.layout.box-warning">
+				<source>Box Warning</source>
+			</trans-unit>
+			<trans-unit id="tt_content.layout.box-danger">
+				<source>Box Danger</source>
+			</trans-unit>
+
+			<!-- Content element: Section -->
+			<trans-unit id="tt_content.section.hidden">
+				<source>Hidden</source>
+			</trans-unit>
+			<trans-unit id="tt_content.section.visible-phone">
+				<source>Visible on phones</source>
+			</trans-unit>
+			<trans-unit id="tt_content.section.visible-tablet">
+				<source>Visible on tablets</source>
+			</trans-unit>
+			<trans-unit id="tt_content.section.hidden-desktop">
+				<source>Hidden on desktops</source>
+			</trans-unit>
+			<trans-unit id="tt_content.section.visible-desktop">
+				<source>Visible on desktops</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

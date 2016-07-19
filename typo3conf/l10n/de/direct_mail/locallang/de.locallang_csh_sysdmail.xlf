@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2014-08-24T08:06:47Z" product-name="direct_mail" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id=".description" xml:space="preserve">
+        <source>A direct mail is a highly customized and personalized newsletter sent to subscribers either as HTML or Plain text, with or without attachments.</source>
+      <target></target></trans-unit>
+      <trans-unit id=".details" xml:space="preserve">
+        <source>Direct mail records are produced by the Direct Mail module.
+
+A direct mail record contains information about a newsletter such as subject, sender, priority, attachments and whether HTML or Plain text content is allowed. Furthermore, it also holds the compiled mail content which is sent to the subscribers.</source>
+      <target></target></trans-unit>
+      <trans-unit id="_.seeAlso" xml:space="preserve" approved="yes">
+        <source>sys_dmail_group, sys_dmail_category</source>
+      <target state="translated">sys_dmail_group, sys_dmail_category</target></trans-unit>
+      <trans-unit id="type.description" xml:space="preserve">
+        <source>Type of source of the Direct mail</source>
+      <target></target></trans-unit>
+      <trans-unit id="type.details" xml:space="preserve">
+        <source>The Direct mail may be compiled from a page extracted from the page tree of the TYPO3 site: 'TYPO3 Page', or from a page from another site: 'External URL'.</source>
+      <target></target></trans-unit>
+      <trans-unit id="from_email.description" xml:space="preserve">
+        <source>Enter the sender email address. (Required)</source>
+      <target></target></trans-unit>
+      <trans-unit id="from_email.details" xml:space="preserve">
+        <source>This email address will appear as the originating address or sender address in the direct mails received by the recipients.</source>
+      <target></target></trans-unit>
+      <trans-unit id="from_name.description" xml:space="preserve">
+        <source>Enter the sender name. (Required)</source>
+      <target></target></trans-unit>
+      <trans-unit id="from_name.details" xml:space="preserve">
+        <source>This name will appear as the name of the author or sender in the direct mails received by the recipients.</source>
+      <target></target></trans-unit>
+      <trans-unit id="replyto_email.description" xml:space="preserve">
+        <source>Enter the email address to which replys are sent. (Optional)</source>
+      <target></target></trans-unit>
+      <trans-unit id="replyto_email.details" xml:space="preserve">
+        <source>If no reply address is specified, the sender email address will be used.</source>
+      <target></target></trans-unit>
+      <trans-unit id="replyto_name.description" xml:space="preserve">
+        <source>Enter the name of the 'Reply To' email address. (Optional)</source>
+      <target></target></trans-unit>
+      <trans-unit id="replyto_name.details" xml:space="preserve">
+        <source>If no reply name is specified, the sender name will be used.</source>
+      <target></target></trans-unit>
+      <trans-unit id="return_path.description" xml:space="preserve">
+        <source>Enter the return path email address here.</source>
+      <target></target></trans-unit>
+      <trans-unit id="return_path.details" xml:space="preserve">
+        <source>This is the address to which non-deliverable mails will be returned to.
+If you put in the marker ###XID### it'll be substituted with the unique id of the mail recipient.
+Note that if PHP is executing in safe mode, the Direct mail module may not be able to set the return path to a value different than the value defined at the server level.</source>
+      <target></target></trans-unit>
+      <trans-unit id="organisation.description" xml:space="preserve">
+        <source>Enter the name of the sending organization.</source>
+      <target></target></trans-unit>
+      <trans-unit id="organisation.details" xml:space="preserve">
+        <source>The name of the organization will appear in the headers of the mails sent to subscribers.</source>
+      <target></target></trans-unit>
+      <trans-unit id="priority.description" xml:space="preserve">
+        <source>Enter the email delivery priority.</source>
+      <target></target></trans-unit>
+      <trans-unit id="priority.details" xml:space="preserve">
+        <source>The delivery priority will be set in the headers of the mails sent to subscribers.</source>
+      <target></target></trans-unit>
+      <trans-unit id="sendOptions.description" xml:space="preserve">
+        <source>Select the format of mail content.</source>
+      <target></target></trans-unit>
+      <trans-unit id="sendOptions.details" xml:space="preserve">
+        <source>If in doubt, set it to both Plain text and HTML. The messages will then be sent with both formats included, and the recipients are normally able to select their preferred format.</source>
+      <target></target></trans-unit>
+      <trans-unit id="includeMedia.description" xml:space="preserve">
+        <source>Set this option if you want to incorporate images and other media inside the HTML mail content.</source>
+      <target></target></trans-unit>
+      <trans-unit id="includeMedia.details" xml:space="preserve">
+        <source>If the option is set, images and other media are encoded and incorporated into the messages. Sent messages will be heavier to transport.
+If the option is not set, images and media are included in HTML content by absolute reference (href) to their location on the site where they reside.</source>
+      <target></target></trans-unit>
+      <trans-unit id="flowedFormat.description" xml:space="preserve">
+        <source>Set this option if you want to use normally flowing text inside the plain text mail content.</source>
+      <target></target></trans-unit>
+      <trans-unit id="flowedFormat.details" xml:space="preserve">
+        <source>If the option is set, plain text mail content will be broken in fixed length lines, as is standard for plain text email content, but so-called flowed format will be used. This will allow client agents that support this format to display the text as normally flowing text. The option is ignored if 'quoted-printable' is used.</source>
+      <target></target></trans-unit>
+      <trans-unit id="HTMLParams.description" xml:space="preserve">
+        <source>If the Direct mail is of type 'TYPO3 Page', enter the additional URL parameters used to fetch the HTML content.
+
+If the Direct Mail is of type 'External URL',enter the complete URL used to fetch the HTML content.</source>
+      <target></target></trans-unit>
+      <trans-unit id="HTMLParams.details" xml:space="preserve">
+        <source>When the Direct mail is of type 'TYPO3 Page', the specified parameters will be added to the URL used to fetch the HTML content of the direct mail. If in doubt, leave it blank.
+
+When the Direct Mail is of type 'External URL', this field should contain the complete URL used to fetch the HTML content.</source>
+      <target></target></trans-unit>
+      <trans-unit id="plainParams.description" xml:space="preserve">
+        <source>If the Direct mail is of type 'TYPO3 Page', enter the additional URL parameters used to fetch the plain text content of the direct mail.
+
+If the Direct Mail is of type 'External URL',enter the complete URL used to fetch the plain text content.</source>
+      <target></target></trans-unit>
+      <trans-unit id="plainParams.details" xml:space="preserve">
+        <source>When the Direct mail is of type 'TYPO3 Page', the specified parameters will be added to the URL used to fetch the plain text content of the direct mail. If in doubt, set it either to '&amp;type=99' or, when using TemplaVoila, to '&amp;print=1'.
+
+When the Direct Mail is of type 'External URL', this field should contain the complete URL used to fetch the plain text content.</source>
+      <target></target></trans-unit>
+      <trans-unit id="use_domain.description" xml:space="preserve">
+        <source>Optionnally, select a domain that should be used for fetching content from internal TYPO3 pages.</source>
+      <target></target></trans-unit>
+      <trans-unit id="use_domain.details" xml:space="preserve">
+        <source>If a domain is selected, it will also be used in all internal links contained in mail content. If no domain is selected, the domain in use in the backend when the direct mail is compiled will be used to fetch content.</source>
+      <target></target></trans-unit>
+      <trans-unit id="use_rdct.description" xml:space="preserve">
+        <source>Redirect long links found in plain text content.</source>
+      <target></target></trans-unit>
+      <trans-unit id="use_rdct.details" xml:space="preserve">
+        <source>If set, links longer than 76 characters found in plain text content will be redirected: long URL's will be substituted with ?RDCT=[md5hash] parameters.</source>
+      <target></target></trans-unit>
+      <trans-unit id="long_link_mode.description" xml:space="preserve">
+        <source>If set and if use_rdct is set, all links in plain text content will be redirected, not only links longer than 76 characters.</source>
+      <target></target></trans-unit>
+      <trans-unit id="authcode_fieldList.description" xml:space="preserve">
+        <source>List of fields used in the computation of the authentication code included in unsubscribe links and jump URL's in direct mails.</source>
+      <target></target></trans-unit>
+    </body>
+  </file>
+</xliff>

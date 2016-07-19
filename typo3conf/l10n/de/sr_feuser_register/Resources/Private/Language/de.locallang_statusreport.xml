@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="de" type="array">
+			<label index="Conflicting_extensions_installed"/>
+			<label index="none"/>
+			<label index="keys"/>
+			<label index="uninstall"/>
+			<label index="Required_extensions_not_installed"/>
+			<label index="install"/>
+			<label index="Front_end_login_security_level"/>
+			<label index="must_be_normal_or_rsa"/>
+			<label index="Salted_passwords_in_front_end"/>
+			<label index="enabled"/>
+			<label index="disabled"/>
+			<label index="salted_passwords_must_be_enabled"/>
+		</languageKey>
+  </data>
+</T3locallangExt>

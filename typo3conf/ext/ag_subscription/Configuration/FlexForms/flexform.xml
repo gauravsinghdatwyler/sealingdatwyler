@@ -1,0 +1,200 @@
+	<T3DataStructure>
+  <meta>
+    <langDisable>1</langDisable>
+    <!--  <langChildren>1</langChildren>!-->
+  </meta>
+  <sheets >
+    <tab_1>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>LLL:EXT:ag_subscription/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.generalSetting</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+			<settings.ttaddress> 
+				<TCEforms>
+					<label>LLL:EXT:ag_subscription/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.ttaddress</label>
+					<config>
+						<type>select</type>
+						<items type="array">
+						<numIndex index="1" type="array">
+							<numIndex index="0">LLL:EXT:ag_subscription/Resources/Private/Language/locallang_ttaddress_fields.xlf:tt_address.name</numIndex>
+							<numIndex index="1">name</numIndex>							
+						</numIndex>
+						<numIndex index="2" type="array">
+							<numIndex index="0">LLL:EXT:ag_subscription/Resources/Private/Language/locallang_ttaddress_fields.xlf:tt_address.first_name</numIndex>
+							<numIndex index="1">first_name</numIndex>
+						</numIndex>
+						<numIndex index="3" type="array">
+							<numIndex index="0">LLL:EXT:ag_subscription/Resources/Private/Language/locallang_ttaddress_fields.xlf:tt_address.city</numIndex>
+							<numIndex index="1">city</numIndex>
+						</numIndex>
+						<numIndex index="4" type="array">
+							<numIndex index="0">LLL:EXT:ag_subscription/Resources/Private/Language/locallang_ttaddress_fields.xlf:tt_address.email</numIndex>
+							<numIndex index="1">email</numIndex>
+						</numIndex>
+						<numIndex index="5" type="array">
+							<numIndex index="0">LLL:EXT:ag_subscription/Resources/Private/Language/locallang_ttaddress_fields.xlf:tt_address.phone</numIndex>
+							<numIndex index="1">phone</numIndex>
+						</numIndex>
+						</items>
+						<minitems>0</minitems>
+						<maxitems>100</maxitems>
+						<size>8</size>
+					</config>
+				</TCEforms>
+			</settings.ttaddress> 
+	   		
+			<settings.requiredFields> 
+				<TCEforms>
+					<label>LLL:EXT:ag_subscription/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.requiredFields</label>
+					<config>
+						<type>select</type>
+						<items type="array">
+						<numIndex index="1" type="array">
+							<numIndex index="0">LLL:EXT:ag_subscription/Resources/Private/Language/locallang_ttaddress_fields.xlf:tt_address.name</numIndex>
+							<numIndex index="1">name</numIndex>
+						</numIndex>
+						<numIndex index="2" type="array">
+							<numIndex index="0">LLL:EXT:ag_subscription/Resources/Private/Language/locallang_ttaddress_fields.xlf:tt_address.first_name</numIndex>
+							<numIndex index="1">first_name</numIndex>
+						</numIndex>
+						<numIndex index="3" type="array">
+							<numIndex index="0">LLL:EXT:ag_subscription/Resources/Private/Language/locallang_ttaddress_fields.xlf:tt_address.city</numIndex>
+							<numIndex index="1">city</numIndex>
+						</numIndex>
+						<numIndex index="4" type="array">
+							<numIndex index="0">LLL:EXT:ag_subscription/Resources/Private/Language/locallang_ttaddress_fields.xlf:tt_address.email</numIndex>
+							<numIndex index="1">email</numIndex>
+						</numIndex>
+						<numIndex index="5" type="array">
+							<numIndex index="0">LLL:EXT:ag_subscription/Resources/Private/Language/locallang_ttaddress_fields.xlf:tt_address.phone</numIndex>
+							<numIndex index="1">phone</numIndex>
+						</numIndex>
+						</items>
+						<minitems>0</minitems>
+						<maxitems>100</maxitems>
+						<size>8</size>
+					</config>
+				</TCEforms>
+			</settings.requiredFields> 
+			
+			<settings.storageFolder>
+				<TCEforms>
+					<label>LLL:EXT:ag_subscription/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.storagePID</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxitems>1</maxitems>
+						<minitems>0</minitems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.storageFolder>
+			<settings.showUnsubscribeLink>
+				<TCEforms>
+				 	<label>LLL:EXT:ag_subscription/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.showUnsubscribeLink</label>
+					 <config>
+					 	 <type>check</type>			          
+					 </config>
+				</TCEforms>
+			</settings.showUnsubscribeLink>						
+        </el>
+      </ROOT>
+    </tab_1>
+    <tab_2>
+    	<ROOT>
+    		<TCEforms>
+	          <sheetTitle>LLL:EXT:ag_subscription/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.generalSettingTab2</sheetTitle>
+	        </TCEforms>
+	        <type>array</type>
+	        <el>
+	        	<settings.sendToReceiver>
+			        <TCEforms>
+			         <label>LLL:EXT:ag_subscription/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.sendToReceiver</label>
+			         <config>
+			          <type>check</type>			          
+			         </config>
+			        </TCEforms>
+			    </settings.sendToReceiver>
+			    
+
+    			<settings.receiverName>
+			        <TCEforms>
+			         <label>LLL:EXT:ag_subscription/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.receiverName</label>
+			         <config>
+			          <type>input</type>
+			          <size>30</size>
+			         </config>
+			        </TCEforms>
+			    </settings.receiverName> 
+
+			    <settings.receiverEmail>
+			        <TCEforms>
+			         <label>LLL:EXT:ag_subscription/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.receiverEmail</label>
+			         <config>
+			          <type>input</type>
+			          <size>30</size>
+			         </config>
+			        </TCEforms>
+			    </settings.receiverEmail>
+
+			    <settings.receiverSubject>
+			        <TCEforms>
+			         <label>LLL:EXT:ag_subscription/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.receiverSubject</label>
+			         <config>
+			          <type>input</type>
+			          <size>30</size>
+			         </config>
+			        </TCEforms>
+			    </settings.receiverSubject> 
+
+    		</el>
+      	</ROOT>
+    </tab_2>
+
+    <tab_3>
+    	<ROOT>
+    		<TCEforms>
+	          <sheetTitle>LLL:EXT:ag_subscription/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.generalSettingTab3</sheetTitle>
+	        </TCEforms>
+	        <type>array</type>
+	        <el>
+    			<settings.senderName>
+			        <TCEforms>
+			         <label>LLL:EXT:ag_subscription/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.senderName</label>
+			         <config>
+			          <type>input</type>
+			          <size>30</size>
+			         </config>
+			        </TCEforms>
+			    </settings.senderName> 
+
+			    <settings.senderEmail>
+			        <TCEforms>
+			         <label>LLL:EXT:ag_subscription/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.senderEmail</label>
+			         <config>
+			          <type>input</type>
+			          <size>30</size>
+			         </config>
+			        </TCEforms>
+			    </settings.senderEmail>
+
+			    <settings.senderSubject>
+			        <TCEforms>
+			         <label>LLL:EXT:ag_subscription/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.senderSubject</label>
+			         <config>
+			          <type>input</type>
+			          <size>30</size>
+			         </config>
+			        </TCEforms>
+			    </settings.senderSubject> 
+
+    		</el>
+      	</ROOT>
+    </tab_3>
+
+  </sheets>
+</T3DataStructure>

@@ -1,0 +1,17 @@
+{namespace n=GeorgRinger\News\ViewHelpers}<!--
+	=====================
+		Partials/List/Item_newslisting.html
+-->
+
+<div class="event-elem teaser-accordeon" itemscope="itemscope" itemtype="http://schema.org/Article" id="">
+	<n:excludeDisplayedNews newsItem="{newsItem}"/>
+	<div class="info">
+		<span class="date"><f:format.date format="d. F Y">{newsItem.datetime}</f:format.date></span>
+		<span class="title">{newsItem.title}</span>
+	</div>
+	<div class="content">
+		<span class="text">
+		<f:format.html>{newsItem.bodytext}</f:format.html>
+		</span>
+	</div>
+</div>

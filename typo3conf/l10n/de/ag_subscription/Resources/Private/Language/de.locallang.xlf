@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-01-06T17:43:47Z" product-name="ag_subscription">
+		<header/>
+		<body>
+			
+			<trans-unit id="plugin-title">
+				<source>Directmail Subscription</source>
+				<target>Directmail Subscription</target>
+			</trans-unit>
+
+			<trans-unit id="plugin-description">
+				<source>Directmail Subscription</source>
+			</trans-unit>
+
+			<trans-unit id="tx_agsubscription_domain_model_agsubscription">
+				<source>Ag Subscription</source>
+			</trans-unit>
+									
+			<trans-unit id="flexforms_general.senden">
+				<source>Submit</source>
+				<target>Senden</target>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_general.subscriptionUpdate">
+				<source>Ihr Profil wurde aktualisiert</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.subscriptionApproved">
+				<source>Ihre Anmeldung wurde bestätigt</source>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_general.subscriptionDeleted">
+				<source>YIhre Registrierung wurde gelöscht!</source>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_general.mail.updatedProfile.I.0">
+				<source>Sie haben Ihr Profil aktualisiert.</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.subscribedAlready">
+				<source>Die Mail-Adresse ist bereits registriert</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.subscriptionFailed.I.0">
+				<source>Es trat ein Registrierungsfehler auf</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.subscriptionFailed.I.1">
+				<source>May happen if you click the setfixed link a second time (if the record has changed since the setfixed link was generated this error will happen!)</source>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_general.subscriptionSuccess.I.0">
+				<source>Registrierung erhalten.</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.subscriptionSuccess.I.1">
+				<source>Sie sind nun für unseren Newsletter registriert. Ein E-Mail wurde an folgende Adresse gesendet:</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.subscriptionSuccess.I.2">
+				<source>In diesem Mail befindet sich ein Aktivierungslink, mit welchem Sie die Registrierung bestätigen und abschließen.</source>
+			</trans-unit>
+						
+			<trans-unit id="flexforms_general.mail.subscriptionContent.I.0">
+				<source>Sie sind nun für unseren Newsletter angemeldet.</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.mail.subscriptionContent.I.1">
+				<source>WICHTIG:</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.mail.subscriptionContent.I.2">
+				<source>Sie müssen den folgenden Link klick, um Ihre Registrierung abzuschließen:</source>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_general.mail.subscriptionContent.I.3">
+				<source>Wenn Sie mit der Anmeldung nicht einverstanden sind (zum Beispiel weil Sie diese nicht gesendet haben), dann klicken Sie bitte hier:</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.mail.subscriptionContent.I.4">
+				<source>Wenn Sie ihr Profil bearbeiten möchten, so klicken Sie bitte hier:</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.mail.successconfiramation">
+				<source>Sie haben Ihre Anmeldung vollständig abgeschlossen.</source>
+			</trans-unit> 
+
+			<trans-unit id="flexforms_general.mail.subscriptiondelete">
+				<source>Ihre Registrierung wurde gelöscht</source>
+			</trans-unit> 
+			
+			<trans-unit id="flexforms_general.subscriptionInfomail.I.0">
+				<source>Es wurde ein Mail an Ihre Mail-Adresse übermittelt. Darin finden Sie alle benötigten Informationen.</source>
+			</trans-unit> 
+			
+			<trans-unit id="flexforms_general.noEmailRegistered">
+				<source>Diese Mail ist nicht registriert.</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.dear">
+				<source>Sehr geehrter</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.frontLink.subscription.I.0">
+				<source>Wenn Sie sich bereits erfolgreich registriert haben und sie wollen Ihre Anmeldung beenden,</source>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_general.frontLink.subscription.I.1">
+				<source>dann klicken Sie bitte hier:</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

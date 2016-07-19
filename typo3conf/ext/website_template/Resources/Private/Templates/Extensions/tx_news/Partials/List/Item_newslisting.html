@@ -1,0 +1,15 @@
+{namespace n=GeorgRinger\News\ViewHelpers}<!--
+	=====================
+		Partials/List/Item_newslisting.html
+-->
+
+<div class="col-sm-3 articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article" id="">
+	<n:excludeDisplayedNews newsItem="{newsItem}"/>
+	
+	<n:link newsItem="{newsItem}" settings="{settings}">
+		<div class="news-list-item info-box">	
+			<h2><strong><f:format.date format="d. F Y">{newsItem.datetime}</f:format.date>,</strong><br><f:format.crop maxCharacters="75" append=" ">{newsItem.title}</f:format.crop></h2>
+			<p class="news-list-morelink"><f:cObject typoscriptObjectPath="lib.storyteaser_readmore" /> »</p>
+		</div>
+	</n:link>
+</div>

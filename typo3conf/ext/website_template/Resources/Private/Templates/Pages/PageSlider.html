@@ -1,0 +1,66 @@
+<f:layout name="Default" />
+<f:section name="content">
+    <div id="wrapper">
+        <header id="branding" role="banner">
+           <f:render partial="header" arguments="{_all}" />
+        </header>
+
+        <section id="main-content">
+			<nav id="sub-nav">
+				<f:cObject typoscriptObjectPath="lib.subnavMenu" />
+				<f:cObject typoscriptObjectPath="lib.subnavMenu_1" />
+			</nav>
+			<div class="back-to-overview">
+				<f:cObject typoscriptObjectPath="lib.back_to_page" />
+			</div>
+			<div class="breadcrumb_navigation">
+				<div class="clearfix" id="breadcrumb">
+					<f:cObject typoscriptObjectPath="lib.breadcrumb" />
+				</div>
+				<nav class="success-story-nav" role="navigation">
+					<ul>
+						<li><f:cObject typoscriptObjectPath="lib.prev_page" /></li>
+						<li><f:cObject typoscriptObjectPath="lib.next_page" /></li>
+					</ul>
+				</nav>
+			</div>
+			<div id="page-intro">
+				<h1><f:cObject typoscriptObjectPath="lib.pagetitle" /></h1>
+				<div class="content">
+					<div class="text-section standard media photo no-img">
+						<f:cObject typoscriptObjectPath="lib.content.left" />
+					</div>
+				</div>
+			</div>
+            <div id="main" role="main">
+			   <div class="inner-content">
+				   <div class="text-section">
+						<f:cObject typoscriptObjectPath="lib.content.main" />
+					</div>
+               </div>
+            </div>
+            <!-- end main -->
+            <nav class="success-story-nav">
+				<ul>
+					<li><f:cObject typoscriptObjectPath="lib.prev_page" /></li>
+					<li><f:cObject typoscriptObjectPath="lib.next_page" /></li>
+				</ul>
+			</nav>
+
+            <div id="base" class="clearfix">
+				<f:cObject typoscriptObjectPath="lib.content.right" />
+            </div>
+
+        </section>
+
+    </div>
+    <!-- end wrapper -->
+    <footer id="site-info">
+       <f:render partial="footer" arguments="{_all}" />
+    </footer>
+
+</f:section>
+
+
+
+

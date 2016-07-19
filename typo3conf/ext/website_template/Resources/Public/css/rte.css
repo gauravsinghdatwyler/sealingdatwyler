@@ -1,0 +1,441 @@
+span.highlight, p.highlight {
+    color:#0A8AD2;
+}
+p.fontVerdana{ font-family: Verdana;  font-size: 8.5pt; }
+p.newslink{
+    padding-right:10px;
+    text-align: right;
+}
+a.newslink{
+    color: #007690;
+}
+
+a.linkint {
+    background-image: url("../images/linkint-std.gif");
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    padding: 2px 2px 2px 10px;
+}
+a.linkext {
+    background-image: url("../images/linkext-std.gif");
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    padding: 2px 2px 2px 10px;
+}
+a.linkmail {
+    background-image: url("../images/linkmail-std.png");
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    padding: 2px 2px 2px 14px;
+}
+a.doc {
+    background-image: url("../images/word.gif");
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    padding: 2px 2px 2px 20px;
+}
+a.pdf {
+    background-image: url("../images/pdf.gif");
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    padding: 2px 2px 2px 20px;
+}
+ a.ppt {
+    background-image: url("../images/powerpoint.gif");
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    padding: 2px 2px 2px 20px;
+}
+a.newspdf {
+    background-image: url("../images/pdf_16.png");
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    padding: 2px 2px 2px 20px;
+}
+
+a.jpg {
+    background-image: url("../images/image.gif");
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    line-height: 20px;
+    padding: 2px 2px 2px 20px;
+}
+
+a.linkleft {
+    background-image: url("../images/linkleft-std.gif");
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    padding: 2px 2px 2px 10px;
+}
+div.separator {
+    border-bottom: 1px dotted #cccccc;
+    height: 1px;
+    width: 100%;
+}
+h4.defaulth4{
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+div.buttonhide{
+    background-image: url("../images/open_div.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: 25px;
+    padding-left: 30px;
+    padding-top: 5px;
+}
+div.buttonshow{
+    background-image: url("../images/open_div.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: 25px;
+    padding-left: 30px;
+    padding-top: 5px;
+}
+div.captionHolder{
+    font-size: 75%; font-weight: bold; font-style: italic; margin-left: 0px; margin-top: 3px;
+}
+tr.hiddensection, div.hiddensection{
+    color:gray;
+}
+tr.hiddensection p{
+    color: gray;
+}
+tr.hiddensection  ul li{
+    color: gray;
+}
+
+div.imageborder{
+    background-color: #bfd8dc;
+    border-color: #4c828c;
+    border-style: solid;
+    border-width: 1px;
+    padding: 3px;
+}
+div.imageborder p{
+    margin: 0;
+}
+div#accordion{
+    background-color: #FFF5EE;
+}
+
+div.ui-accordion-content{
+    background-color: #FDF5E6;
+    border: dotted 1px #cccccc;
+}
+div.subheader{
+    font-size: 16px;
+    font-weight: bold;
+    border: dotted 1px #cccccc;
+}
+
+ul.liststyle1 {
+    clear: both;
+}
+ul.liststyle1 li{
+    display: block;
+    margin: 8px 0 0 12px;
+    padding-top: 16px;
+    
+}
+
+ul.liststyle2 {
+    clear: both;
+    padding-top: 5px;
+}
+
+ul.liststyle2 li {
+    display: block;
+    margin: 8px 0 0 12px;
+}
+
+ul.liststyle3 {
+    color: #187891;
+    list-style: disc inside none;
+}
+ul.liststyle3 li {
+    margin-bottom: 3px;
+}
+
+ul.liststyle4 {
+}
+ul.liststyle4 li {
+    display: list-item;
+    list-style: none outside none;
+    margin: 0 2em;
+    padding: 0;
+}
+
+ul.defaultListstyle {
+}
+ul.defaultListstyle li {
+    display: list-item;
+    list-style:outside;
+    font-family: Arial,Georgia,Helvetica,sans-serif;
+    font-size: 12px;
+}
+
+ul.projectlist {
+}
+ul.projectlist li {
+    display: list-item;
+    list-style: none outside none;
+    margin: 0 2em;
+    padding: 0;
+}
+
+ul.projectlist li h4 {
+    display: inline-table;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    margin: 1em 0 0;
+    padding: 0;
+    vertical-align: top;
+    width: 30%;
+}
+
+ul.projectlist li h6 {
+    display: inline-table;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 90%;
+    font-weight: bold;
+    margin: 0;
+    padding: 1em 2em;
+    vertical-align: top;
+    width: 80%;
+}
+
+ul.projectlist li h6.researchfields {
+    display: inline-table;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 90%;
+    font-weight: bold;
+    margin: 0;
+    padding: 1em 2em;
+    vertical-align: top;
+    width: 80%;
+}
+ul.filetree {
+    
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    border: dotted 1px #cccccc;
+}
+ul.filetree li{
+    
+}
+
+
+li.closed{
+    background: url("../images/plus.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding: 1px 0 2px 19px;
+}
+span.folder{
+    background: url("../images/folder-closed.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding: 1px 0 2px 19px;
+}
+table, td {
+    color: #000;
+    font-family: Arial,Georgia,Helvetica,sans-serif;
+    font-size: 12px;
+}
+
+table.tablesort {
+    font-family: arial;
+    font-size: 8pt;
+    margin: 10px 0 15px;
+    text-align: left;
+    width: 100%;
+}
+table.tablesort tr th.tablesort_header{
+    background-image: url("../images/bg.gif");
+    background-position: right center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+table.tablesort tr th {
+    background-color: #aed0d9;
+    border: 1px solid #fff;
+    font-size: 8pt;
+    padding: 4px;
+}
+table.tablesort tr th.tablesort_headerSortDown{
+    background-color: #8dbdd8;
+    background-image: url("../images/desc.gif");
+}
+table.tablesort tr.odd{
+    background-color: #ececec;
+}
+table.tablesort tr.even{
+    background-color: #ffffff;
+}
+table.tablesort tr td.introduction{
+
+}
+/*.......................................................................................*/
+table.tableunsort {
+    font-family: arial;
+    font-size: 8pt;
+    margin: 10px 0 15px;
+    text-align: left;
+    width: 100%;
+}
+table.tableunsort tr th.tableunsort_header{
+    
+    background-position: right center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+table.tableunsort tr th {
+    background-color: #aed0d9;
+    border: 1px solid #fff;
+    font-size: 8pt;
+    padding: 4px;
+    text-align: center;
+}
+table.tableunsort tr th.tableunsort_selected{
+    background-color: #8dbdd8;
+    
+}
+table.tableunsort tr.odd{
+    background-color: #ececec;
+}
+table.tableunsort tr.even{
+    background-color: #ffffff;
+}
+table.tableunsort tr td.introduction{
+
+}
+
+div.skelclear {
+    clear: both;
+    border: 1px dotted #cccccc;
+}
+div.bereich_titel {
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 3px;
+    padding: 0;
+    width: 100%;
+    border: 1px dotted #cccccc;   
+}
+div.bereich_content {
+    display: block;
+    float: left;
+    margin: 0 0 12px;
+    padding: 0;
+    width: 100%;
+    border: 1px dotted #cccccc;
+}
+
+p.wissenschaftler_rubrik_contentavailable {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+p.grayHeader{
+    font-size: 13px;
+    color: #333;
+}
+span.publicationCustom, p.publicationCustom {
+    margin: 10px 0px;
+    border: 1px dotted #cccccc;
+}
+table.courseTable {width: 625px; font-family: Arial,Georgia,Helvetica,sans-serif;
+    font-size: 12px; padding: 0px; border-spacing: 0;
+    border-collapse: collapse;}
+
+table.courseTable tbody tr td.courseTable-col1 {width: 83px; line-height: 16px;font-size: 12px; vertical-align: top; padding-bottom:5px; color:#808080; }
+table.courseTable tbody tr td.courseTable-col1 p{line-height: 16px; font-size: 12px; }
+table.courseTable tbody tr td.courseTable-col2 {width:540px; margin-left: 20%; line-height: 16px;text-align: left;font-size: 12px;vertical-align: top; padding-bottom: 5px;}
+table.courseTable tbody tr td.courseTable-col2 p.bodytext {margin-bottom:8px; }
+table.courseTable tbody tr td.courseTable-col2 p{font-size: 12px; margin: 0px; }
+
+
+table.lectureTable {width: 625px; font-family: Arial,Georgia,Helvetica,sans-serif;
+    font-size: 12px; padding: 0px; border-spacing: 0;
+    border-collapse: collapse;}
+
+table.lectureTable tbody tr td.lectureTable-col1 {width: 83px; line-height: 16px;font-size: 12px; vertical-align: top; padding-bottom:5px; color:#808080; }
+table.lectureTable tbody tr td.lectureTable-col1 p{line-height: 16px; font-size: 12px; }
+table.lectureTable tbody tr td.lectureTable-col2 {width:540px; margin-left: 20%; line-height: 16px;text-align: left;font-size: 12px;vertical-align: top; padding-bottom: 5px;}
+table.lectureTable tbody tr td.lectureTable-col2 p.bodytext {margin-bottom:8px; }
+table.lectureTable tbody tr td.lectureTable-col2 p{font-size: 12px; margin: 0px; }
+
+
+table.tablesupport {
+    color: #000;
+    font-family: Arial,Georgia,Helvetica,sans-serif;
+    font-size: 12px;
+}
+table.tablesupport tr td{
+ padding:4px;font-size: 12px; vertical-align: top;      
+}
+table.tablesupport tr td.tablesupport-col1 {width: 110px; padding:4px;font-size: 12px; vertical-align: top;   }
+
+table.tablesupport tr td.tablesupport-col2 { padding:4px;font-size: 12px; vertical-align: top; }
+
+table.tablesupport tr.odd{
+    background-color: #ececec;
+}
+table.tablesupport tr.even{
+    background-color: #ffffff;
+}
+
+fieldset {
+    border: 1px solid #666666;
+    float: none;
+    margin: 0 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: left;
+}
+
+legend {
+    color: #187891;
+    font-weight: bold;
+    margin-left: 1em;
+    padding: 0 1em;
+}
+.blacktext{ color: #000000;}
+
+div.separatorTwo {
+    display: block;
+    margin: 16px 8px 4px;
+    width: 100%;
+}
+
+
+/*START early added on 11/3/15 for text align in RTE START*/
+.align-justify{text-align: justify;}
+/* END Newly added on 11/3/15 for text align in RTE END*/
+
+/*START Added for new table START*/
+table.tableizer-table {
+    text-align: left;
+}
+
+.tableizer-table th {
+    border-bottom: 1px solid #ccc;
+    font-weight: normal;
+    width: 350px;
+}
+
+.tableizer-table td {
+    margin: 3px;
+    padding: 4px;
+    width: 300px;
+}
+
+div.more, div.less{color:red;}
+div.hidden{color:#009fb4;}
+div.visible{/*color:#009100;*/}
+
+
+/*END Added for new table END*/

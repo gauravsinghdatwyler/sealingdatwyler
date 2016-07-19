@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Language labels for Job Aapplication Form</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="label_fieldset">Loa Request Form</label>
+			<label index="firstname">First Name</label>
+			<label index="lastname">Last Name</label>
+			<label index="title">Your Title</label>
+			<label index="company">Your Company</label>
+			<label index="address1">Your Address1</label>
+			<label index="address2">Your Address2</label>
+			<label index="city">Your City</label>
+			<label index="state">Your State/province</label>
+			<label index="zip">Your Zip/postal code</label>
+			<label index="country">Your Country</label>
+			<label index="telephone">Your Telephone</label>
+			<label index="email">Your E-Mail address</label>
+			<label index="companyname">Company name</label>
+			<label index="companyaddress1">Company Address1</label>
+			<label index="companyaddress2">Company Address2</label>
+			<label index="companycity">Company City</label>
+			<label index="companystate">Company State/province</label>
+			<label index="companyzip">Company Zip/postal code</label>
+			<label index="companycountry">Company Country</label>
+			<label index="contactfirstname">Contact First Name</label>
+			<label index="contactlastname">Contact Last Name</label>
+			<label index="contacttitle">Contact Title</label>
+			<label index="contactemail">Contact Email</label>
+			<label index="requesttype">Request Type</label>
+			<label index="requesttype.first">Update LoA for name change</label>
+			<label index="requesttype.second">New product registration</label>
+			<label index="loarequestno">Loa latter Number</label>
+			<label index="submissioncountry">submissioncountry</label>
+			<label index="submissioncountry_job1">USA</label>
+			<label index="submissioncountry_job2">Canada</label>
+			<label index="applicationtype">Application Type</label>
+			<label index="fdadepartment">If USA, please select FDA department</label>
+			<label index="fdadepartment_job1">CDER</label>
+			<label index="fdadepartment_job2">CBER</label>
+			<label index="fdadepartment_job3">CDRH</label>
+			<label index="fdadepartment_job4">CVR (Center for Veterinary Medecine)</label>
+			<label index="drugproductname">Your drug Product Name</label>
+			<label index="compound">Compound</label>
+			<label index="productcode">Product Code</label>
+			<label index="washingprogram">Washing Program</label>
+			<label index="washingprogram_job1">SAF</label>
+			<label index="washingprogram_job2">ISAF</label>
+			<label index="washingprogram_job3">OMNI</label>
+			<label index="washingprogram_job4">FLNC</label>
+			<label index="washingprogram_job5">FLCO</label>
+			<label index="washingprogram_job6">ISCD</label>
+			<label index="coating">Coating</label>
+			<label index="coating_job1">Not coated</label>
+			<label index="coating_job2">Omniflex FM257/2</label>
+			<label index="coating_job3">OmniflexPlus FM259/0</label>
+			<label index="coating_job4">OPC FM257/2 Plunger</label>
+			<label index="coating_job5">Omniflex3G - FM457/0</label>			
+			<label index="otherspecify">If other,please specify</label>
+			<label index="application">Application</label>
+			<label index="application_job1">RfS (Ready-for-Sterilization)</label>
+			<label index="application_job2">RtU (Ready-to-Use) / Pre-sterilized</label>
+			<label index="application_job3">WFI-rinsed by customer</label>
+			<label index="accountmanager">Account Manager</label>
+			<label index="dateloarequest">Date Loa Request</label>
+			<label index="submit">FINISH</label>
+			<label index="next">Next Step</label>
+			<label index="prev">BACK</label>
+	
+			
+
+			
+			<label index="error_zip_integer">Your zip/postal code: must be a number</label>
+			<label index="error_telephone_required">Please enter your phone numbers!</label>	
+			<label index="error_telephone_integer">Your telephone: must be a number</label>				
+			<label index="error_email_email">Your e-mail address: must be a valid email address</label>
+			<label index="error_contactemail_email">Contact e-mail: must be a valid email address</label>
+		
+
+		</languageKey>
+	</data>
+</T3locallang>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="de" type="array">
+			<label index="default"/>
+			<label index="pages.no_content_types"/>
+			<label index="pages.tab.configuration"/>
+			<label index="pages.tab.content_settings"/>
+			<label index="pages.tab.element_type"/>
+			<label index="tt_content.pi_flexform"/>
+			<label index="tt_content.tx_fed_fcecontentarea"/>
+			<label index="tt_content.tx_fed_fcefile"/>
+			<label index="tt_content.tx_fed_fcefile.emptyMessage"/>
+		</languageKey>
+  </data>
+</T3locallangExt>

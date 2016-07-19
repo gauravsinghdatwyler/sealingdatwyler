@@ -1,0 +1,53 @@
+/* ---- Branch Filter Status Lable Value Source ---- */
+#single, #multiple{
+    display: none;
+}
+
+/* --- Query Form Errors Css --- */
+
+#main .text.error > h1{
+    display: none;
+}
+#main > .text.error {
+    display: block; 
+    color: #df1417;
+    font-size: 2.0em;
+    line-height: 1em;
+    font-weight: 600;
+    text-transform: none;
+    margin-left: 25px;
+}
+
+/* --- Contact Filter ---  */
+#wrapper{
+	overflow: hidden;
+}
+.mix{
+	display: none;
+}
+
+.country-option{
+	position: relative;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 8.4em;
+    width: auto;
+}
+@media(max-width: 767px){
+    .country-option{
+        width: 284px;
+        margin-right: 5px;
+    }   
+}
+@media(max-width: 320px){
+    .country-option{
+        width: 97%;
+    }   
+}
+#main .no-data{
+    display: none;
+}
+.contact-finder .loadmore-container{
+    display: none;
+}

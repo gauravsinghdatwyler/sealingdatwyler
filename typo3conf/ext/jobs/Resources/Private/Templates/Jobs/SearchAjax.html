@@ -1,0 +1,31 @@
+
+<f:for each="{jobss}" as="jobs" key="townname">
+	<f:for each="{jobs}" as="jobstown" key="countryname">
+	<div class="selected-ancestor">
+		<div class="branch-office">{countryname}, {townname}</div>
+		<ul class="jobs">
+			<f:for each="{jobstown}" as="jobstitle">
+			<li class="job list-item">
+				<f:link.action pageUid="{jobsDetailPid}" action="show" arguments="{jobs : jobstitle}">
+				<span class="title">
+					<p><strong>{jobstitle.title}</strong></p>
+				</span>
+				<span class="country">{countryname} {townname}</span>
+				</f:link.action>
+			</li>
+			</f:for>
+		</ul>
+	</div>
+	</f:for>
+</f:for>
+
+<f:if condition="{count}>1">
+	<f:then>
+		<div id="jobsResCnt" style="display: none;">{count} <f:translate key="tx_jobs_domain_model_jobs.jobCounts" /></div>
+	</f:then>
+	<f:else>
+		<div id="jobsResCnt" style="display: none;">{count} <f:translate key="tx_jobs_domain_model_jobs.jobCount" /></div>
+	</f:else>
+</f:if>
+
+

@@ -1,0 +1,73 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<f:flashMessages />
+<div class="product-finder">
+<div class="filters">
+	<div class="search filter">
+		<f:form.textfield id="inquery" name="query" value="{ajaxArguments.query}" class="user-success form-ui-valid" />
+		<f:form.submit value="search" id="searchbtn" />
+	</div>
+	<div class="application-type filter">
+		<f:form.select name="application" id="selapplication" options="{applications}" value="{ajaxArguments.application}" optionLabelField="name" optionValueField="name" prependOptionLabel="{f:translate(key: 'tx_productfinder_domain_model_products.application.prependOptionLabel')}" prependOptionValue="none"></f:form.select>
+	</div>
+	<div class="type filter">
+		<f:form.select name="type" id="seltype" options="{types}" value="{ajaxArguments.type}" optionLabelField="name" optionValueField="name" prependOptionLabel="{f:translate(key: 'tx_productfinder_domain_model_products.type.prependOptionLabel')}" prependOptionValue="none"></f:form.select>
+	</div>
+	<div class="status filter">
+		
+	</div>
+	<div class="dimension filter">
+		<f:form.select name="dimension" id="seldimension" options="{dimensions}" value="{ajaxArguments.dimension}" optionLabelField="name" optionValueField="name" prependOptionLabel="{f:translate(key: 'tx_productfinder_domain_model_products.dimension.prependOptionLabel')}" prependOptionValue="none"></f:form.select>
+	</div>
+	<div class="material filter">
+		<f:form.select name="material" id="selmaterial" options="{materials}" value="{ajaxArguments.material}" optionLabelField="name" optionValueField="name" prependOptionLabel="{f:translate(key: 'tx_productfinder_domain_model_products.material.prependOptionLabel')}" prependOptionValue="none"></f:form.select>
+	</div>
+	
+</div>
+
+<div class="content">
+	<f:for each="{products}" as="product" iteration="iterator">
+		<f:if condition="{iterator.index}<20">
+			<div class="product" data-name="{product.name}" data-description="<f:format.stripTags>{product.description}</f:format.stripTags>" data-size="{product.size.name}" data-type="{product.type.name}" data-material="{product.material.name}" data-application-types="<f:for each='{product.application}' as='app' iteration='itemIterator'><f:if condition='{itemIterator.isLast}'><f:then>{app.name}</f:then><f:else>{app.name},</f:else></f:if></f:for>">
+				<f:link.action pageUid="{settings.productDetailPid}" action="show" arguments="{products : product}">
+					<figure>
+						<f:image src="{product.image.originalResource.publicUrl}" width="180"/>
+					</figure>
+					<h2>{product.name}</h2>
+				</f:link.action>
+			</div>
+		</f:if>
+	</f:for>
+</div>
+<div class="products hidden">
+	<f:for each="{products}" as="product" iteration="iterator">
+			<div class="product" data-name="{product.name}" data-description="<f:format.stripTags>{product.description}</f:format.stripTags>" data-size="{product.size.name}" data-type="{product.type.name}" data-material="{product.material.name}" data-application-types="<f:for each='{product.application}' as='app' iteration='itemIterator'><f:if condition='{itemIterator.isLast}'><f:then>{app.name}</f:then><f:else>{app.name},</f:else></f:if></f:for>">
+				<f:link.action pageUid="{settings.productDetailPid}" action="show" arguments="{products : product}">
+					<figure>
+						<f:image src="{product.image.originalResource.publicUrl}" width="180"/>
+					</figure>
+					<h2>{product.name}</h2>
+				</f:link.action>
+			</div>
+	</f:for>
+</div>
+</div>
+
+<div id="various-translations" style="display: none;">
+    <span id="translations-key-product">product</span>
+    <span id="translations-key-products">products</span>
+</div>
+</f:section>

@@ -1,0 +1,51 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for BranchOffice</h1>
+
+<f:flashMessages />
+
+<table  class="tx_officeext" >
+	<tr>
+		<th><f:translate key="tx_officeext_domain_model_branchoffice.name" /></th>
+		<th><f:translate key="tx_officeext_domain_model_branchoffice.address" /></th>
+		<th><f:translate key="tx_officeext_domain_model_branchoffice.city" /></th>
+		<th><f:translate key="tx_officeext_domain_model_branchoffice.zip" /></th>
+		<th><f:translate key="tx_officeext_domain_model_branchoffice.site_url" /></th>
+		<th><f:translate key="tx_officeext_domain_model_branchoffice.image" /></th>
+		<th><f:translate key="tx_officeext_domain_model_branchoffice.latitude" /></th>
+		<th><f:translate key="tx_officeext_domain_model_branchoffice.longitude" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{branchOffices}" as="branchOffice">
+		<tr>
+			<td><f:link.action action="show" arguments="{branchOffice : branchOffice}"> {branchOffice.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{branchOffice : branchOffice}"> {branchOffice.address}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{branchOffice : branchOffice}"> {branchOffice.city}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{branchOffice : branchOffice}"> {branchOffice.zip}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{branchOffice : branchOffice}"> {branchOffice.siteUrl}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{branchOffice : branchOffice}"> {branchOffice.image.originalResource.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{branchOffice : branchOffice}"> {branchOffice.latitude}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{branchOffice : branchOffice}"> {branchOffice.longitude}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{branchOffice : branchOffice}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{branchOffice : branchOffice}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New BranchOffice</f:link.action>
+</f:section>

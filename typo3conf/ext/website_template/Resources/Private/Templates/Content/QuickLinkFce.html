@@ -1,0 +1,40 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Content"/>
+<f:section name="Configuration">
+	<flux:form id="QuickLink" label="Quick Link FCE">
+			<flux:field.input name="heading" label="Heading" />
+			<flux:form.section name="blocks" label="Tabbed Content">
+				<flux:form.object name="block" label="Block">
+					<flux:field.input name="title" label="Title" />
+					<flux:field.input name="link" label="Link">
+						<flux:wizard.link activeTab="page" />
+					</flux:field.input>
+				</flux:form.object>
+		</flux:form.section>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>Quick Link FCE</b>
+</f:section>
+
+<f:section name="Main">
+	<div id="teaser" class="teaser teaserlist">
+		<h2>{heading}</h2>
+		<ul>
+			<f:for each="{blocks}" as="block" iteration="itemIterator">
+			<li>
+				<f:link.typolink parameter="{block.block.link}">{block.block.title}</f:link.typolink>
+			</li>
+			</f:for>
+		</ul>
+	</div>
+</f:section>
+
+
+
+	
+
+

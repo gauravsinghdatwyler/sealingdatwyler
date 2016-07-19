@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-04-14T14:49:21Z" product-name="productfinder">
+		<header/>
+		<body>
+			<trans-unit id="tx_productfinder_domain_model_applications">
+				<source>Applications</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_applications.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_types">
+				<source>Types</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_types.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_dimensions">
+				<source>Dimensions</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_dimensions.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_materials">
+				<source>Materials</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_materials.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products">
+				<source>Products</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.application">
+				<source>Application</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.size">
+				<source>Size</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.material">
+				<source>Material</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_products.pdfs">
+				<source>Pdfs</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_pdfs">
+				<source>Pdfs</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_pdfs.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_pdfs.file">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="tx_productfinder_domain_model_pdfs.issecure">
+				<source>Issecure</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

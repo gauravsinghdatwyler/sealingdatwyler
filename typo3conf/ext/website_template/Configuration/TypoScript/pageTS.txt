@@ -1,0 +1,19 @@
+TCEFORM.tt_content.section_frame{
+	addItems.100 = Grey Tabs
+	addItems.200 = Show/Hide Content
+	addItems.300 = Page Intro
+	addItems.400 = Quote Text
+	addItems.500 = Content
+	addItems.600 = News/Events Tab
+	addItems.700 = Accordion Content
+	addItems.800 = Application Form
+	addItems.900 = Product Tab
+	addItems.950 = Media Contact
+}
+
+TCEFORM.pages {
+  layout.addItems.4 = Layout 4
+  layout.addItems.5 = Layout 5
+  layout.addItems.6 = Layout 6
+  layout.addItems.7 = Layout 7
+}

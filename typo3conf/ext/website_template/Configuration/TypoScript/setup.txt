@@ -1,0 +1,13 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:typo3conf/ext/website_template/Resources/Private/TypoScript/">
+<INCLUDE_TYPOSCRIPT: source="DIR:typo3conf/ext/website_template/Resources/Private/TypoScript/Extensions/03_felogin.ts">
+
+
+plugin.tx_website_template {
+	view {
+		templateRootPaths.0 = EXT:website_template/Resources/Private/Templates/Content/
+		partialRootPaths.0 = EXT:website_template/Resources/Private/Partials/
+		layoutRootPaths.0 = EXT:website_template/Resources/Private/Layouts/
+	}
+}
+
+

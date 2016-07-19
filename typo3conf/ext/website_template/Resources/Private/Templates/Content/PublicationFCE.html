@@ -1,0 +1,36 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Content"/>
+<f:section name="Configuration">
+	<flux:form id="PublicationFCE" label="Publication FCE">
+		<flux:form.section name="blocks" label="Publication FCE">
+			<flux:form.object name="block" label="Block">
+				<flux:field.input name="title1" label="Title1" />
+				<flux:field.input name="title2" label="Title1" />
+				<flux:field.file name="fileupload" label="File Upload" uploadFolder="uploads/download/" size="1" showThumbnails="1" maxItems="1" allowed="pdf,mp4" />
+			</flux:form.object>
+		</flux:form.section>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>Publication FCE</b>
+</f:section>
+
+<f:section name="Main">
+	<div class="publication-download">
+		<div class="row">
+			<f:for each="{blocks}" as="block">
+				<div class="col-md-3">
+					<div class="download-box" id="ext">
+						<f:link.typolink parameter="uploads/download/{block.block.fileupload}" target="_blank">
+							<h2><b>{block.block.title1}</b><br>{block.block.title2}</h2>
+							<p class="download-link"><f:cObject typoscriptObjectPath="lib.publication_download" /> »</p>
+						</f:link.typolink>
+					</div>
+				</div>
+			</f:for>
+		</div>
+	</div>
+</f:section>

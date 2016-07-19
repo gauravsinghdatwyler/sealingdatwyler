@@ -1,0 +1,41 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Content"/>
+<f:section name="Configuration">
+	<flux:form id="TeaserGroupContainer" label="Teaser Group Container FCE">
+		<flux:form.section name="blocks" label="Teaser Group Container">
+			<flux:form.object name="block" label="Block">
+				<flux:field.file name="image" label="Image" uploadFolder="uploads/pics/" validate="trim" size="1" showThumbnails="1" maxItems="1" allowed="jpg,png,gif,jpeg,svg" />
+				<flux:field.input name="title" label="Title" />
+				<flux:field.input name="link" label="Link">
+					<flux:wizard.link activeTab="page" />
+				</flux:field.input>
+			</flux:form.object>
+		</flux:form.section>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>Teaser Group Container FCE</b>
+</f:section>
+
+<f:section name="Main">
+	<div class="floated-teaser-group no-background" id="floated-teaser-group-1">
+		<div class="content">
+			<f:for each="{blocks}" as="block" iteration="itemIteration">
+				<div class="teaser text-box-section image-button" id="ftg-1-teaser-{itemIteration.cycle}">
+					<f:link.typolink parameter="{block.block.link}">
+						<figure><f:image src="uploads/pics/{block.block.image}" alt="{block.block.title}" width="463" height="230" /></figure>
+						<div class="button-label">
+							<h2><p>{block.block.title}</p></h2>
+						</div>
+					</f:link.typolink>
+				</div>
+			</f:for>
+		</div>
+	</div>
+</f:section>
+
+
+
