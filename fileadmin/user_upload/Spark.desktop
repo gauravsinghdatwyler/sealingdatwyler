@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_IN]=/opt/spark/spark.png
+Name[en_IN]=Spark
+Exec=/opt/spark/Spark
+Name=Spark
+Icon=/opt/spark/spark.png
