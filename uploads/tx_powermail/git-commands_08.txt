@@ -1,0 +1,52 @@
+git config --global user.name "Bhavesh Jasani"
+git config --global user.email "bhavesh.jasani@drcsystems.com"
+
+Create a new repository
+
+mkdir itschnittstellede-redesign-typo3
+cd itschnittstellede-redesign-typo3
+git init
+touch README.md
+git add README.md
+git commit -m "first commit"
+git remote add origin git@git.drcsystems.com:typo3/itschnittstellede-redesign-typo3.git
+git push -u origin master
+
+Push an existing Git repository
+
+cd existing_git_repo
+git remote add origin git@git.drcsystems.com:typo3/itschnittstellede-redesign-typo3.git
+git push -u origin master
+
+git checkout -b [name_of_your_new_branch]
+
+git config core.fileMode false
+git add .
+
+git status
+
+git commit -m "first commit"
+git push -u origin development
+
+==========================================================
+
+How to clone project form git to localhost
+============================================
+
+Go to localhost's folder
+
+- git clone http://git.drcsystems.com/typo3/webcasa24-label-changing-hourly-typo3.git
+
+===========================================
+Symlink the folder from git to localhost
+===========================================
+
+ln -s ./../typo3_src/typo3_src-4.5.11/t3lib /var/www/html/webcasaGit/t3lib
+ln -s ./../typo3_src/typo3_src-4.5.11/typo3 /var/www/html/webcasaGit/typo3
+ln -s ./../typo3_src/typo3_src-4.5.11/index.php /var/www/html/webcasaGit/index.php
+ 
+ln -s ./../typo3_src/typo3_src-6.2.13/typo3 /var/www/html/travelexperience/typo3
+
+
+
+

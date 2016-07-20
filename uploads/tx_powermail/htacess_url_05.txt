@@ -1,0 +1,2 @@
+https://www.drupal.org/node/38960
+https://httpd.apache.org/docs/trunk/rewrite/remapping.html
